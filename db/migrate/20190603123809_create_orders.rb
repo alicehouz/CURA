@@ -3,7 +3,6 @@ class CreateOrders < ActiveRecord::Migration[5.2]
     create_table :orders do |t|
       t.string :order_number
       t.references :user, foreign_key: true
-      t.references :prescription, foreign_key: true
       t.integer :total_price
       t.date :order_date
       t.string :street_name

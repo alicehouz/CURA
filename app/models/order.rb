@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
   belongs_to :user
-  belongs_to :prescription
-  belongs_to :pharmacy
+  has_many :prescriptions, through: :orders_prescription
+  # belongs_to :pharmacy
 end
