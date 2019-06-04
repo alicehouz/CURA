@@ -7,4 +7,8 @@ class PagesController < ApplicationController
   def welcome
   end
 
+
+  def home2
+  end
+
 end
