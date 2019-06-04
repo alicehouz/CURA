@@ -1,0 +1,82 @@
+.container-signin {
+  height: 100vh;
+  width: 300px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+}
+
+.pharmacist-img {
+  width: 300px;
+  padding-top: 44px;
+  padding-bottom: 40px;
+}
+
+.email-entry {
+  border-radius: 20px;
+  font-family: "Poppins";
+  box-shadow: 1px 1px #C2CBE2;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.password-entry {
+  border-radius: 20px;
+  font-family: "Poppins";
+  box-shadow: 1px 1px #C2CBE2;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-blue {
+  background-image: linear-gradient(to right, #2657eb 0%, #7474BF 100%, #348AC7 51%,);
+  color: white;
+  font-family: "Poppins";
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 6px 50px 6px 50px;
+}
+
+.login-blue:hover {
+  background-position: right center;
+}
+
+.remember-me {
+  font-family: "Poppins";
+}
+
+.link-login {
+  color: #C2CBE2;
+}
+
+.link-login:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.link-password {
+  color: #C2CBE2;
+  display: flex;
+  justify-content: center;
+  margin-top: 11px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.link-password:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.link-signup {
+  color: #C2CBE2;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  margin-top: -13px;
+}
+
+.link-signup:hover {
+  color: white;
+  text-decoration: underline;
+}
