@@ -9,10 +9,11 @@
 
 .welcome-centered {
   text-align: center;
+  padding-top: 150px;
 }
 
 .logo-cura {
-  padding-top: 150px;
+
   width: 210px;
 }
 
@@ -34,6 +35,8 @@
   color: black;
   border-radius: 20px;
   padding: 6px 50px 6px 50px;
+  display: block;
+  margin-bottom: 15px;
 }
 
 .signup-link {
