@@ -9,6 +9,8 @@
 
 <p>Expiration date : <%= @prescription.prescription_expiry_date %></p>
 
+<%= link_to "Make an order", new_prescription_order_path(@prescription) %>
+
 <%= link_to "Delete", prescription_path, method: :delete %>
 
 <%= link_to "Back to index", prescriptions_path %>
