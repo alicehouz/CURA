@@ -1,4 +1,10 @@
 class PrescriptionsController < ApplicationController
+  validates :image, presence: true
+  validates :prescription_name, presence: true
+  validates :prescription_start_date, presence: true
+  validates :prescription_expiry_date, presence: true
+  validatse :delivery_date, presence: true
+
   def index
     @prescriptions = Prescription.all
   end
@@ -6,7 +12,7 @@ class PrescriptionsController < ApplicationController
   def create
     @prescription = current_user.prescriptions
     if @prescription.save
-      redirect_to prescriptions_path??
+      redirect_to prescriptions_path#??
     else
       render :new
     end
@@ -23,7 +29,7 @@ class PrescriptionsController < ApplicationController
   def destroy
     @prescription = prescription.find(params[:id])
     @prescription.destroy
-    redirect_to ??
+    redirect_to #??
   end
 
   private
