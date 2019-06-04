@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database...'
-Order.destroy_all
+
 Prescription.destroy_all
 
+
+
+Order.destroy_all
 puts 'Creating orders...'
 Order.create!(
   order_number: '#12345',
