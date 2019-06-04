@@ -1,1 +1,24 @@
 // Specific CSS for your home-page
+
+
+.welcome-page {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  background: linear-gradient(#00c0ff 2%, #2e0998 97%);
+}
+
+.logo-cura {
+  padding-top: 150px;
+  width: 200px;
+}
+
+.tagline {
+  font-family: 'Poppins';
+  font-size: 10px;
+  color: white;
+  padding-top: 10px;
+  text-align: center;
+
+}
+

@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :prescriptions, only: [:index, :new, :create]
 
+  get 'welcome', to: "pages#welcome"
+  resources :orders do
+    resources :prescriptions
+  end
 
   devise_for :users
 
