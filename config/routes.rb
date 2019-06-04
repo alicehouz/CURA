@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
+  get 'welcome', to: "pages#welcome"
   resources :orders do
     resources :prescriptions
   end
