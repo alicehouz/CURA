@@ -1,2 +1,13 @@
 <h1>Orders#new</h1>
-<p>Find me in app/views/orders/new.html.erb</p>
+
+
+<%= simple_form_for [@prescription, @order] do |f| %>
+
+<p>Delivery address</p>
+<%= f.input :street_name, input_html: { value: current_user.street_name } %>
+<%= f.input :zip_code, input_html: { value: current_user.zip_code } %>
+<%= f.input :city, input_html: { value: current_user.city } %>
+<%= f.submit %>
+<% end %>
+
+

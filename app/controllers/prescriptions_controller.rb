@@ -1,14 +1,13 @@
 class PrescriptionsController < ApplicationController
-
-
   def index
     @prescriptions = Prescription.all
   end
 
   def create
-    @prescription = current_user.prescriptions
+    @prescription = Prescription.new(prescription_params)
+    @prescription.user = current_user
     if @prescription.save
-      redirect_to prescriptions_path#??
+    redirect_to prescriptions_path
     else
       render :new
     end
@@ -23,14 +22,14 @@ class PrescriptionsController < ApplicationController
   end
 
   def destroy
-    @prescription = prescription.find(params[:id])
+    @prescription = Prescription.find(params[:id])
     @prescription.destroy
-    redirect_to #??
+    redirect_to prescriptions_path
   end
 
   private
 
   def prescription_params
-    params.require(:prescription).permit(:scan_date, :image, :prescription_name, :prescription_start_date, :prescription_expiry_date, :delivery_date, :reccurrency)
+    params.require(:prescription).permit(:image, :image_cache, :prescription_name, :prescription_start_date, :prescription_expiry_date)
   end
 end

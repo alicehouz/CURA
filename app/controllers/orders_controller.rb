@@ -4,31 +4,23 @@ class OrdersController < ApplicationController
   end
 
   def new
+    @prescription = Prescription.find(params[:prescription_id])
     @order = Order.new
   end
 
   def create
-    @order = current_user.orders
+    @prescription = Prescription.find(params[:prescription_id])
+    @order = current_user.orders.build(order_params)
     if @order.save
-      redirect_to orders_paths#??
+      redirect_to prescription_orders_path
     else
       render :new
     end
   end
 
-  def show
-    @order = Order.find(params[:id])
-  end
+  private
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-    @order = Order.find(params[:id])
-    @order.destroy
-    redirect_to orders_paths
+  def order_params
+    params.require(:order).permit(:street_name, :zip_code, :city)
   end
 end

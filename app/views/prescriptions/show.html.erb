@@ -1,2 +1,16 @@
 <h1>Prescriptions#show</h1>
-<p>Find me in app/views/prescriptions/show.html.erb</p>
+
+<h2>Prescription : <%= @prescription.prescription_name %></h2>
+
+<%= cl_image_tag @prescription.image, height: 400, width: 400 %>
+
+<h3>Validity of the prescription :</h3>
+<p>Prescription date : <%= @prescription.prescription_start_date %></p>
+
+<p>Expiration date : <%= @prescription.prescription_expiry_date %></p>
+
+<%= link_to "Make an order", new_prescription_order_path(@prescription) %>
+
+<%= link_to "Delete", prescription_path, method: :delete %>
+
+<%= link_to "Back to index", prescriptions_path %>

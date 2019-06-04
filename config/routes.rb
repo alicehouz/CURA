@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  resources :orders do
-    resources :prescriptions
+
+  resources :prescriptions, only: [:index, :new, :create, :show, :destroy] do
+    resources :orders, only: [:index, :new, :create]
   end
+
+  get 'welcome', to: "pages#welcome"
+
 
   devise_for :users
 

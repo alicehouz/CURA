@@ -1,2 +1,11 @@
 <h1>Prescriptions#new</h1>
 <p>Find me in app/views/prescriptions/new.html.erb</p>
+
+<%= simple_form_for @prescription do |f| %>
+<%= f.input :image %>
+<%= f.input :image_cache, as: :hidden %>
+<%= f.input :prescription_name %>
+<%= f.input :prescription_start_date %>
+<%= f.input :prescription_expiry_date %>
+<%= f.button :submit %>
+<% end %>
