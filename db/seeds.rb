@@ -7,10 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database...'
 
-Prescription.destroy_all
-
-
-
 Order.destroy_all
 puts 'Creating orders...'
 Order.create!(

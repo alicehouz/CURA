@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
-  resources :prescriptions, only: [:index, :new, :create, :show, :destroy]
+  resources :prescriptions, only: [:index, :new, :create, :show, :destroy] do
+    resources :orders, only: [:index, :new, :create]
+  end
 
   get 'welcome', to: "pages#welcome"
 
