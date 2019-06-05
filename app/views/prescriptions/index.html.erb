@@ -2,9 +2,9 @@
   <div class="prescriptions-header">
     <div class="text-my-prescriptions">
       <%= link_to welcome_path do%>
-      <i class="fas fa-chevron-left" style="font-size: 24px; color: white;"></i>
+      <i class="fas fa-chevron-left chevron-style"></i>
       <%end%>
-      <h2 style="display: inline-block; padding-left: 20px; font-size: 24px;">My Prescriptions</h2>
+      <h2 class="h2-style">My Prescriptions</h2>
     </div>
   </div>
 </div>
@@ -15,8 +15,8 @@
     <div class="prescription-date">prescription start date : <%= prescription.prescription_start_date %></div>
     <div class="prescription-date">prescription expiry date : <%= prescription.prescription_expiry_date %></div>
     <div class="show-delete">
-      <button type="button" class="btn btn-outline-light" style="border: dashed 0.5px #000000; border-radius: 16%; border-color: #898A8F;font-size: 70%; margin: 0% 2% 0% 0%"><%= link_to "Show", prescription_path(prescription) %></button>
-      <button type="button" class="btn btn-outline-light" style="border: dashed 0.5px #000000; border-radius: 16%; border-color: #898A8F; font-size: 70%; margin: 0% 0% 0% 2%"><%= link_to "Delete", prescription_path(prescription.id), method: :delete %>
+      <button type="button" class="btn btn-outline-light btn-outline-style-1" ><%= link_to "Show", prescription_path(prescription) %></button>
+      <button type="button" class="btn btn-outline-light btn-outline-style-2" ><%= link_to "Delete", prescription_path(prescription.id), method: :delete %>
       </button>
     </div>
   </div>
