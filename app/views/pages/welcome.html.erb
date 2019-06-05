@@ -15,7 +15,7 @@
 
 <div class="welcome-body">
   <div class="scan ">
-    <a  class="button-welcome" id="scan-icon" ><%= image_tag ("scan.png"), class: "scan-photo" %></a>
+    <a  class="button-welcome" id="scan-icon" data-toggle="modal" data-target="#exampleModal"><%= image_tag ("scan.png"), class: "scan-photo" %></a>
       <div class ="text-welcome" >
       <p class ="scan-text">Scan </p>
       <p class="scan-para"> your prescription </p>
@@ -44,3 +44,30 @@
       <%= image_tag ("petitcercle.png"), class: "circle-bottom-right" %>
     </div>
 <div>
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-container">
+      <div class="pop-up-header">
+        <div class="modal-title" id="cameradiv">
+          <%= image_tag ("photo-camera.png"), class: "camera-photo" %>
+          <p id = "camera-text">Camera</p>
+        </div>
+
+      </div>
+      <div class="pop-up-body">
+        <div class="modal-title" id="clouddiv">
+          <%= image_tag ("cloud-upload.png"), class: "cloud-photo" %>
+          <p id = "upload-text">Upload</p>
+        </div>
+
+      </div>
+
+    </div>
+     <div class="pop-up-footer">
+        <button type="button"  data-dismiss="modal" class="button-pop-up"> Close</button>
+
+      </div>
+  </div>
+</div>
