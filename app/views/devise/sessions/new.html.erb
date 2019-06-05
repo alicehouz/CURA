@@ -7,17 +7,17 @@
                   label: false,
                   required: false,
                   autofocus: true,
-                  input_html: { placeholder: "Email", autocomplete: "email", class: "email-entry" }
+                  input_html: { placeholder: "Email", autocomplete: "email", class: "signin-form-input" }
                    %>
       <%= f.input :password,
                   label: false,
                   required: false,
-                  input_html: { placeholder: "Password", autocomplete: "current-password", class: "password-entry" } %>
+                  input_html: { placeholder: "Password", autocomplete: "current-password", class: " signin-form-input password-entry" } %>
       <%= f.input :remember_me, as: :boolean, input_html: { class: "remember-me" } if devise_mapping.rememberable? %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in", class: "login-blue" %>
+      <%= f.button :submit, "Log in", class: "btn-blue" %>
     </div>
   <% end %>
 

@@ -1,18 +1,67 @@
-// .container-login {
-//   width: 400px;
-//   display: flex;
-//   justify-content: center;
-// }
+.welcome-header {
+  height: 27vh;
+}
 
-// h2 {
-//   font-family: "Poppins";
-//   color: #3b49cc;
-//   padding-top: 20px;
-//   padding-left: 20px;
-// }
+.container-login {
+  margin: auto;
+}
 
-// h3 {
-//   padding-top: 5px;
-//   padding-left: 25px;
-//   font-size: 16px;
-// }
+.text-getting-started {
+  top: 50px;
+  left: 25px;
+  position: absolute;
+}
+
+.user_password .form-text {
+  display: none;
+}
+
+.title-login {
+  font-family: "Poppins";
+  font-size: 20px;
+  color: white;
+  z-index: 1;
+}
+
+.subtitle-login {
+  padding-top: 110px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.full-name {
+  display: flex;
+
+}
+
+.login-form-input {
+  border-radius: 20px;
+}
+
+.slick-form {
+  padding-top: 50px;
+  width: 300px;
+  display: flex;
+  margin: auto;
+}
+
+.slick-dots {
+  bottom: 90px !important;
+}
+
+.user_avatar {
+  display: flex;
+}
+
+/*.circle-bottom-right {
+  width: 30%;
+  float: right;
+  margin-top: 23px;
+}*/
+
+.welcome-footer {
+  height: 15vh;
+  position: absolute;
+  margin: auto;
+  bottom: 0px;
+}
