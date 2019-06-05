@@ -4,12 +4,23 @@
   <% if order.order_status == "pending" %>
    <div class="card" style="width: 18rem;">
     <div class="card-body">
-     <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %></h5> <%= order.id%></
+     <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %></h5>
       <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
       <p class="card-text">Date order : <%= order.order_date %></p>
       <p><%= link_to "show", order_path(order) %></p>
       <p><%= link_to "delete", order_path(order), method: :delete %></p>
     </div>
   </div>
+  <% end %>
+   <% if order.order_status == "close" %>
+    <div class="card" style="width: 18rem;">
+     <div class="card-body">
+       <h5 class="card-title">
+       <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %>
+       <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
+       <p class="card-text">Date order : <%= order.order_date %></p>
+       <p class="card-text">Delivery address :<%= order.street_name %>,<%= order.zip_code %>,<%= order.city %> </p>
+      </div>
+    </div>
   <% end %>
 <% end %>
