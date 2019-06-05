@@ -1,0 +1,66 @@
+.prescriptions-container {
+  background-color: #3A49CC;
+  // border-radius: 0px 0px 24px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 2%;
+}
+
+.prescriptions-header {
+  height: 14vh;
+}
+
+.text-my-prescriptions {
+  top: 30px;
+  left: 25px;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+  z-index: 10;
+}
+
+.prescriptions-body {
+  // background-color: #F1F1F1;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+}
+
+.card-category {
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 2% 8% 3% 8%;
+  padding: 2%;
+  z-index: 2;
+}
+
+.prescription-name {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.prescription-date {
+  font-size: 75%;
+  color:#898A8F;
+}
+
+.show-delete {
+  padding: 2%;
+}
+
+
+
+
+
