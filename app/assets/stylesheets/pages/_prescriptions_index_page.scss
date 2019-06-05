@@ -20,6 +20,33 @@
   z-index: 10;
 }
 
+.chevron-style {
+  font-size: 24px;
+  color: white;
+}
+
+.h2-style {
+  display: inline-block;
+  padding-left: 20px;
+  font-size: 24px;
+}
+
+.btn-outline-style-1 {
+border: dashed 0.5px #000000;
+border-radius: 16%;
+border-color: #898A8F;
+font-size: 70%;
+margin: 0% 2% 0% 0%;
+}
+
+.btn-outline-style-2 {
+  border: dashed 0.5px #000000;
+  border-radius: 16%;
+  border-color: #898A8F;
+  font-size: 70%;
+  margin: 0% 0% 0% 2%
+}
+
 .prescriptions-body {
   // background-color: #F1F1F1;
   height: auto;
