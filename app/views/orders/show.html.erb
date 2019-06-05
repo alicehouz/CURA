@@ -1,2 +1,12 @@
-<h1>Orders#show</h1>
-<p>Find me in app/views/orders/show.html.erb</p>
+<h1>Details order</h1>
+
+
+<p>Order id : <%= @order.id %></p>
+
+<p>Date order : <%= @order.order_date %></p>
+
+<p>Status : <%= @order.order_status %></p>
+
+<p>Delivery address : <%= @order.street_name %>, <%= @order.zip_code %>, <%= @order.city %></p>
+
+
