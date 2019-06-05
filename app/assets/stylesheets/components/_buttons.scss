@@ -1,0 +1,36 @@
+.btn-white {
+  background-color: white;
+  font-family: "Poppins";
+  color: black;
+  border-radius: 20px;
+  padding: 6px 50px 6px 50px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.btn-blue {
+  background-image: linear-gradient(to right, #2657eb 0%, #7474BF 100%, #348AC7 51%,);
+  color: white;
+  font-family: "Poppins";
+  border-radius: 20px;
+  margin-top: 30px;
+  padding: 6px 50px 6px 50px;
+}
+
+.btn-blue-centered {
+  display: flex;
+  margin: auto;
+  margin-top: 37px;
+}
+
+.btn-next {
+  width: 130px;
+  text-align: center;
+  margin-top: 60px !important;
+  color: #3b49cc;
+  border-color: #3b49cc;
+}
+
+.btn-signup {
+  margin-top: 70px !important;
+}

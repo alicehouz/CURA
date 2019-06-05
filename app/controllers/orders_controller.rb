@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.all
+    @orders = Order.where(user: current_user)
   end
 
   def new
@@ -10,12 +10,26 @@ class OrdersController < ApplicationController
 
   def create
     @prescription = Prescription.find(params[:prescription_id])
-    @order = current_user.orders.build(order_params)
+    @order = Order.new(order_params)
+    @order.user = current_user
+    @order.order_status = "pending"
+    @order.order_date = Date.today
     if @order.save
+      OrdersPrescription.create!(prescription_id: @prescription.id, order_id: @order.id)
       redirect_to prescription_orders_path
     else
       render :new
     end
+  end
+
+  def show
+    @order = Order.find(params[:id])
+  end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_to prescriptions_path
   end
 
   private

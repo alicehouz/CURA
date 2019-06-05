@@ -1,55 +1,79 @@
-  <h2>Getting Started...</h2>
-  <h3><strong>Your Personal Information</strong></h3>
+<div class="welcome-header">
+  <%= image_tag ("circle.png"), class: "circle-top-left" %>
+  <div class="text-getting-started">
+    <h2 class="title-login">Getting Started...</h2>
+    <h3 class="subtitle-login"><strong>Your Personal Information</strong></h3>
+  </div>
+</div>
 
 <div class="container-login">
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
-
-    <div class="form-inputs">
-      <%= f.input :avatar %>
-      <%= f.input :avatar_cache, as: :hidden %>
-      <%= f.input :last_name,
-                  required: true,
-                  input_html: { autocomplete: "Last Name" } %>
-      <%= f.input :last_name,
-                  required: true,
-                  input_html: { autocomplete: "Last Name" } %>
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :street_name,
-                  required: true,
-                  input_html: { autocomplete: "Street Name" } %>
-      <%= f.input :zip_code,
-                  required: true,
-                  input_html: { autocomplete: "Zip code" } %>
-      <%= f.input :city,
-                  required: true,
-                  input_html: { autocomplete: "City" } %>
-      <%= f.input :phone_number,
-                  required: true,
-                  input_html: { autocomplete: "Phone Number" } %>
-      <%= f.input :social_security,
-                  required: true,
-                  input_html: { autocomplete: "Social Security Number" } %>
-      <%= f.input :id_card,
-                  required: true,
-                  input_html: { autocomplete: "Id Card" } %>
-
+    <div class="slick-form">
+      <div class="form-inputs">
+        <%= f.input :avatar %>
+        <%= f.input :avatar_cache, as: :hidden %>
+        <div class="full-name">
+          <%= f.input :first_name,
+          label: false,
+          required: true,
+          input_html: { placeholder: "First Name", autocomplete: "Last Name", class: "login-form-input" } %>
+          <%= f.input :last_name,
+          label: false,
+          required: true,
+          input_html: { placeholder: "Last Name", autocomplete: "Last Name", class: "login-form-input" } %>
+        </div>
+        <%= f.input :phone_number,
+        label: false,
+        required: true,
+        input_html: { placeholder: "Phone Number", autocomplete: "Phone Number", class: "login-form-input" } %>
+        <%= f.input :email,
+        label: false,
+        required: true,
+        autofocus: true,
+        input_html: { placeholder: "Email", autocomplete: "email", class: "login-form-input" }%>
+        <%= f.input :password,
+        label: false,
+        required: true,
+        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+        input_html: { placeholder: "Password", autocomplete: "new-password", class: "login-form-input" } %>
+        <%= f.input :password_confirmation,
+        label: false,
+        required: true,
+        input_html: { placeholder: "Password Confirmation", autocomplete: "new-password", class: "login-form-input" } %>
+         <div class="form-actions">
+           <span class="btn-white btn-blue-centered btn-next">Next</span>
+        </div>
+      </div>
+      <div class="form-inputs">
+        <%= f.input :social_security,
+        required: true, class: "btn-white" %>
+        <%= f.input :social_security_cache, as: :hidden %>
+        <%= f.input :id_card,
+        required: true, class: "btn-white" %>
+        <%= f.input :id_card_cache, as: :hidden %>
+        <%= f.input :street_name,
+        label: false,
+        required: true,
+        input_html: { placeholder: "Street Name", autocomplete: "Street Name", class: "login-form-input" } %>
+        <%= f.input :zip_code,
+        label: false,
+        required: true,
+        input_html: { placeholder: "Zip Code", autocomplete: "Zip code", class: "login-form-input" } %>
+        <%= f.input :city,
+        label: false,
+        required: true,
+        input_html: { placeholder: "City", autocomplete: "City", class: "login-form-input" } %>
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up", class: "btn-signup btn-blue btn-blue-centered" %>
+          <span class="btn-previous">back</span>
+        </div>
+      </div>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
+
   <% end %>
-
-  <%= render "devise/shared/links" %>
+</div>
+<div class="welcome-footer">
+  <%= image_tag ("petitcercle.png"), class: "circle-bottom-right" %>
 </div>

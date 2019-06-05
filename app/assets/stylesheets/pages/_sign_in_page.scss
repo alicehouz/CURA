@@ -12,7 +12,7 @@
   padding-bottom: 40px;
 }
 
-.email-entry {
+.signin-form-input {
   border-radius: 20px;
   font-family: "Poppins";
   box-shadow: 1px 1px #C2CBE2;
@@ -21,20 +21,7 @@
 }
 
 .password-entry {
-  border-radius: 20px;
-  font-family: "Poppins";
-  box-shadow: 1px 1px #C2CBE2;
-  text-align: center;
   margin-top: 10px;
-}
-
-.login-blue {
-  background-image: linear-gradient(to right, #2657eb 0%, #7474BF 100%, #348AC7 51%,);
-  color: white;
-  font-family: "Poppins";
-  border-radius: 20px;
-  margin-top: 30px;
-  padding: 6px 50px 6px 50px;
 }
 
 .login-blue:hover {

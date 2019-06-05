@@ -1,10 +1,24 @@
-<h1>Prescriptions#index</h1>
-<p>Find me in app/views/prescriptions/index.html.erb</p>
-
-<% @prescriptions.each do |prescription| %>
-<h3><%= prescription.prescription_name %></h3>
-<%= link_to "Delete", prescription_path(prescription.id), method: :delete %>
-<%= link_to "Show", prescription_path(prescription) %>
-<% end %>
-
-
+<div class="prescriptions-container">
+  <div class="prescriptions-header">
+    <div class="text-my-prescriptions">
+      <%= link_to welcome_path do%>
+      <i class="fas fa-chevron-left chevron-style"></i>
+      <%end%>
+      <h2 class="h2-style">My Prescriptions</h2>
+    </div>
+  </div>
+</div>
+<div class="prescriptions-body">
+  <% @prescriptions.each do |prescription| %>
+  <div class="card-category">
+    <div class="prescription-name"><%= prescription.prescription_name %></div>
+    <div class="prescription-date">prescription start date : <%= prescription.prescription_start_date %></div>
+    <div class="prescription-date">prescription expiry date : <%= prescription.prescription_expiry_date %></div>
+    <div class="show-delete">
+      <button type="button" class="btn btn-outline-light btn-outline-style-1" ><%= link_to "Show", prescription_path(prescription) %></button>
+      <button type="button" class="btn btn-outline-light btn-outline-style-2" ><%= link_to "Delete", prescription_path(prescription.id), method: :delete %>
+      </button>
+    </div>
+  </div>
+  <% end %>
+</div>
