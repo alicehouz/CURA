@@ -1,4 +1,5 @@
 <div class="prescriptions-container">
+  <%= render 'shared/navbar' %>
   <div class="prescriptions-header">
     <div class="text-my-prescriptions">
       <%= link_to prescriptions_path do%>
@@ -8,8 +9,6 @@
     </div>
   </div>
 </div>
-<!-- <h2>Prescription : <%= @prescription.prescription_name %></h2>
--->
 <div class="prescription">
   <div class="img-card"><%= cl_image_tag @prescription.image %></div>
   <div class="show-prescription-name">Validity of the prescription :</div>
@@ -19,4 +18,11 @@
     <button type="button" class="btn btn-outline-light btn-outline-style-make-an-order" ><%= link_to "Make an order", new_prescription_order_path(@prescription) %></button>
     <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Delete", prescription_path, method: :delete %></button>
   </div>
+</div>
+<div> <!-- display:none => element.style.display="block" -->
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 </div>
