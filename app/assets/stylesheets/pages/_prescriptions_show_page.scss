@@ -8,7 +8,10 @@
 }
 
 .prescriptions-header {
-  height: 14vh;
+  height: 7vh;
+  color: white;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .text-my-prescriptions {
@@ -17,7 +20,8 @@
   font-size: 18px;
   color: white;
   position: absolute;
-  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .chevron-style {
@@ -27,8 +31,19 @@
 
 .h2-style {
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 35px;
   font-size: 24px;
+}
+
+.position-style {
+  // padding-left: 51%;
+  // padding-bottom: 51%;
+  width: 100%;
+  text-align: right;
+
+}
+.fa-list-ul-style{
+  color: white;
 }
 
 .prescription {
@@ -44,13 +59,13 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 2% 8% 3% 8%;
+  margin: 4% 8% 3% 8%;
   padding: 2%;
 }
 
 .img-card {
   margin-bottom: 2%;
-  height: auto;
+  height: 57%;
   border-radius: 2%;
   padding: 5%;
 }
@@ -89,3 +104,13 @@
   margin: 0% 0% 0% 2%;
   padding: 2% 12%;
 }
+
+
+
+
+
+
+
+
+
+
