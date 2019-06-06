@@ -31,11 +31,37 @@
 
 .full-name {
   display: flex;
-
 }
 
 .login-form-input {
   border-radius: 20px;
+}
+
+#user_avatar {
+  background-color: #e8eaff;
+  border-radius: 5px;
+}
+
+.user_avatar {
+  display: flex;
+}
+
+#user_social_security {
+  background-color: #e8eaff;
+  border-radius: 5px;
+}
+
+.user_social_security {
+  display: flex;
+}
+
+#user_id_card {
+  background-color: #e8eaff;
+  border-radius: 5px;
+}
+
+.user_id_card {
+  display: flex;
 }
 
 .slick-form {
@@ -49,9 +75,10 @@
   bottom: 90px !important;
 }
 
-.user_avatar {
-  display: flex;
+.slick-dotted.slick-slider {
+  margin-bottom: 0px !important;
 }
+
 
 /*.circle-bottom-right {
   width: 30%;
@@ -64,4 +91,5 @@
   position: absolute;
   margin: auto;
   bottom: 0px;
+  z-index: -50;
 }
