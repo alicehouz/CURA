@@ -46,12 +46,6 @@
         </div>
       </div>
       <div class="form-inputs">
-        <%= f.input :social_security,
-        required: true, class: "btn-white" %>
-        <%= f.input :social_security_cache, as: :hidden %>
-        <%= f.input :id_card,
-        required: true, class: "btn-white" %>
-        <%= f.input :id_card_cache, as: :hidden %>
         <%= f.input :street_name,
         label: false,
         required: true,
@@ -64,6 +58,12 @@
         label: false,
         required: true,
         input_html: { placeholder: "City", autocomplete: "City", class: "login-form-input" } %>
+        <%= f.input :social_security,
+        required: true %>
+        <%= f.input :social_security_cache, as: :hidden %>
+        <%= f.input :id_card,
+        required: true %>
+        <%= f.input :id_card_cache, as: :hidden %>
         <div class="form-actions">
           <%= f.button :submit, "Sign up", class: "btn-signup btn-blue btn-blue-centered" %>
           <span class="btn-previous">back</span>
