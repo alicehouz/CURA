@@ -1,0 +1,36 @@
+<div class="address-contaier">
+  <div class="address-header">
+    <div class="placeaddress d-flex justify-content-start">
+      <%= link_to welcome_path do%>
+      <%= image_tag ("left-arrow.png"), class: "arrow-address" %>
+      <%end%>
+      <h2 class="text-header-address">Placing an order</h2>
+    </div>
+    <div class="address-steps">
+      <%= image_tag ("2.png"), class: "steps-address" %>
+    </div>
+  </div>
+
+  <div class="newaddress-order">
+    <p class="addnew"> + Add new Address</p>
+  </div>
+
+  <div class="address-body">
+
+      <p class="addressbody-text">Your saved addresses</p>
+    <div class="white-container-address">
+      <div class="select-this-address">
+        <%= link_to welcome_path do%> <p class="select-text">Seelect this address</p><%end%>
+      </div>
+
+
+    </div>
+     </div>
+
+      <div class="white-footer-address">
+        <%= link_to order_placement_3_path do%>
+        <%= image_tag ("right.png"), class: "next-order" %>
+        <%end%>
+      </div>
+
+</div>

@@ -1,0 +1,78 @@
+<div class="order-contaier">
+  <div class="order-header">
+    <div class="placeorder d-flex justify-content-start">
+      <%= link_to welcome_path do%>
+      <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+      <%end%>
+      <h2 class="text-header-order">Placing an order</h2>
+    </div>
+    <div class="order-steps">
+      <%= image_tag ("3.png"), class: "steps-order" %>
+    </div>
+  </div>
+
+
+  <div class="order-body">
+    <div class="white-container">
+      <div class="ordernow d-flex">
+        <%= image_tag ("clock.png"), class: "clockorder" %>
+      <p class="orderbody-text">Order Time</p>
+
+      </div>
+
+     <div class= "checkorder">
+
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Order now
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+            Order Later
+            </label>
+          </div>
+
+     </div>
+
+
+     <div class="paynow d-flex">
+         <%= image_tag ("credit.png"), class: "creditorder" %>
+          <p class="paybody-text">Payment Method</p>
+    </div>
+
+    <div class="checkpayment">
+
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Order now
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+            Order Later
+            </label>
+          </div>
+
+
+    </div>
+
+
+    </div>
+
+
+
+
+      <div class="saveforlater">
+        <%= link_to welcome_path do%> <p class="savetext">confirm my order</p><%end%>
+      </div>
+
+
+  </div>
+</div>
