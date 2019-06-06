@@ -3,12 +3,11 @@
   // border-radius: 0px 0px 24px 24px;
   position: sticky;
   top: 0;
-  z-index: 1;
   margin-bottom: 2%;
 }
 
 .prescriptions-header {
-  height: 14vh;
+  height: 7vh;
 }
 
 .text-my-prescriptions {
@@ -17,7 +16,9 @@
   font-size: 18px;
   color: white;
   position: absolute;
-  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .chevron-style {
@@ -44,7 +45,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 2% 8% 3% 8%;
+  margin: 5% 8% 3% 8%;
   padding: 2%;
 }
 
