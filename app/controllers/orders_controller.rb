@@ -27,9 +27,10 @@ class OrdersController < ApplicationController
   end
 
   def destroy
+    @prescription = Prescription.find(params[:prescription_id])
     @order = Order.find(params[:id])
     @order.destroy
-    redirect_to prescriptions_path
+    redirect_to prescription_orders_path(@prescription)
   end
 
   private
