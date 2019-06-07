@@ -38,7 +38,7 @@ position: relative;
 
 }
 .white-container{
-background-color: white;
+
 opacity: 0.9;
 height: 80vh;
 width: 86%;
@@ -127,8 +127,11 @@ font-size: 12px;
 
 .inputs-order-address{
 
-width: 40%;
+width: 80%;
   height: 50px;
+  padding: 0px;
+  margin-left: 12px;
+
 
 
 }
@@ -139,3 +142,25 @@ height: 454px;
     top: -294px;
 
   }
+
+
+.form-control {
+  border: none;
+}
+
+.selectaddress{
+
+ font-weight: bold;
+    position: absolute;
+    left: 59px;
+    top: 160px;
+    background-color: #3A49CC;
+    width: 68%;
+    text-align: center;
+    border-radius: 12px;
+    height: 29px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+
+}
