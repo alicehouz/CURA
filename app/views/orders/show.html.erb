@@ -1,12 +1,24 @@
+
+<% if @order.order_status == "pending" %>
 <h1>Details order</h1>
-
-
 <p>Order id : <%= @order.id %></p>
 
 <p>Date order : <%= @order.order_date %></p>
-
 <p>Status : <%= @order.order_status %></p>
-
 <p>Delivery address : <%= @order.street_name %>, <%= @order.zip_code %>, <%= @order.city %></p>
 
+<% end %>
 
+<% if @order.order_status == "pharmacy accept" %>
+
+<h1>Details order</h1>
+<p>Date order : <%= order.order_date %></p>
+<p> Delivery address :<%= order.street_name %>,<%= order.zip_code %>,<%= order.city %> </p>
+<p>Delivery address :<%= order.street_name %>,<%= order.zip_code %>,<%= order.city %> </p>
+<p>Order details</p>
+<p>- prescription price <%= order.prescription_price %></p>
+<p>- amount refunded <%= order.amount_refunded %></p>
+<p>- delivery price <%= order.delivery_price %></p>
+<p><strong>- total<%= order.total_price %></strong></p>
+
+<% end %>

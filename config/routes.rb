@@ -3,16 +3,10 @@ Rails.application.routes.draw do
   resources :prescriptions, only: [:index, :new, :create, :show, :destroy] do
 
     get 'show_before_order', to: 'prescriptions#show_before_order'
-    resources :orders, only: [:new, :create, :show,:destroy]
-
     resources :orders, only: [:index, :new, :create, :destroy]
 
   end
-  resources :orders, only: [:index, :show, :destroy,:new, :create]
-
-
-
-
+  resources :orders, only: [:show, :destroy]
 
   get 'welcome', to: "pages#welcome"
   get 'order_placement', to: "pages#order_placement"
