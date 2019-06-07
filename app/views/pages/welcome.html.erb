@@ -5,7 +5,7 @@
     <div class ="text-welcome-user">
         <% if user_signed_in? %>
         <h2 id="font-welcome-user" >Welcome to Cura...</h2>
-        <h2 id="name-user-welcome" > <%=current_user.first_name%>Marina</h2>
+        <h2 id="name-user-welcome" > <%=current_user.first_name%></h2>
         <%else%>
         <h2 id="font-welcome-user" >Welcome to Cura</h2>
         <h2 id="name-user-welcome"><strong>Marina</strong></h2>
@@ -25,15 +25,15 @@
   <div class="schedule ">
     <a class="button-welcome" ><%= image_tag ("calendar.png"), class: "schedule-photo" %></a>
      <div class ="text-welcome" >
-      <p class ="scan-text">Scan </p>
+      <p class ="scan-text">Schedule</p>
       <p class="scan-para"> your prescription </p>
       </div>
   </div>
   <div class="search ">
     <a class="button-welcome" ><%= image_tag ("search.png"), class: "search-photo" %></a>
      <div class ="text-welcome" >
-      <p class ="scan-text">Scan </p>
-      <p class="scan-para"> your prescription </p>
+      <p class ="scan-text">Search</p>
+      <p class="scan-para"> other product </p>
       </div>
 
   </div>
