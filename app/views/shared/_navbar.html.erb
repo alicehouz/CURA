@@ -5,10 +5,11 @@
     <span class="caret"></span>
     </button>
     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-      <li><a href="#">My Profil</a></li>
-      <li><a href="#">My Orders</a></li>
-      <li><a href="#">My Prescriptions</a></li>
-      <li><a href="#">Log Out</a></li>
+      <!-- <li><a href="#">My Profil</a></li> -->
+      <li><%= link_to 'My Profil', user_registration_path %></li>
+      <li><%= link_to'My Orders', prescription_orders_path %></li>
+      <li><%= link_to 'My Prescriptions', prescriptions_path %></li>
+      <li><%= link_to 'Sign Out', destroy_user_session_path %></li>
     </ul>
   </div>
 </div>
