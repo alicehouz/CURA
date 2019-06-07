@@ -1,6 +1,9 @@
 <h1>My orders</h1>
 
+
+
 <% @orders.each do |order| %>
+
   <% if order.order_status == "pending" %>
    <div class="card" style="width: 18rem;">
     <div class="card-body">

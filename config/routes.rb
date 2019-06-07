@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   resources :prescriptions, only: [:index, :new, :create, :show, :destroy] do
-    resources :orders, only: [:index, :new, :create]
+    get 'show_before_order', to: 'prescriptions#show_before_order'
+    resources :orders, only: [:new, :create, :show,:destroy]
   end
-  resources :orders, only: [:show, :destroy]
+  resources :orders, only: [:index, :show, :destroy,:new, :create]
+
+
+
+
 
   get 'welcome', to: "pages#welcome"
   get 'order_placement', to: "pages#order_placement"

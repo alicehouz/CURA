@@ -57,10 +57,20 @@
 
       </div>
       <div class="pop-up-body">
-        <div class="modal-title" id="clouddiv">
-          <%= image_tag ("cloud-upload.png"), class: "cloud-photo" %>
-          <p id = "upload-text">Upload</p>
-        </div>
+
+        <%= simple_form_for @prescription do |f| %>
+        <%= f.input :image, input_html: { accept: "image/*", capture: "camera" , }, label: false %>
+        <%= f.input :image_cache, as: :hidden %>
+
+        <button type="submit" class="modal-title" id="clouddiv">
+                  <%= image_tag ("cloud-upload.png"), class: "cloud-photo" %>
+                  <p id = "upload-text">Upload</p>
+                </button>
+
+        <% end %>
+
+
+
 
       </div>
 
