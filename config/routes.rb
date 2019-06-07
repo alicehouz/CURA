@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   resources :prescriptions, only: [:index, :new, :create, :show, :destroy] do
+
     get 'show_before_order', to: 'prescriptions#show_before_order'
     resources :orders, only: [:new, :create, :show,:destroy]
+
+    resources :orders, only: [:index, :new, :create, :destroy]
+
   end
   resources :orders, only: [:index, :show, :destroy,:new, :create]
 

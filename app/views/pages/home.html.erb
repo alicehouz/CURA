@@ -2,7 +2,7 @@
   <div class="welcome-centered">
     <%= image_tag "logo-cura.png", class: "logo-cura" %>
     <p class="tagline">Medicine at your doorstep</p>
-    <div class="links-emplacement">
+    <div class="links-emplacement" >
       <%= link_to  "Sign In", new_user_session_path, class: "btn-white" %>
 
       <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: "btn-white" %>
@@ -10,3 +10,15 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+
+setTimeout(function() {
+const links = document.querySelector(".links-emplacement");
+  links.style.display = "block";
+
+}
+
+  ,1000);
+
+</script>

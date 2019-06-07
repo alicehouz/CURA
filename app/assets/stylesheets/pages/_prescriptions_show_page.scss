@@ -7,7 +7,10 @@
 }
 
 .prescriptions-header {
-  height: 14vh;
+  height: 7vh;
+  color: white;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .text-my-prescriptions {
@@ -16,7 +19,8 @@
   font-size: 18px;
   color: white;
   position: absolute;
-
+  justify-content: space-between;
+  align-items: center;
 }
 
 .chevron-style {
@@ -26,23 +30,26 @@
 
 .h2-style {
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 35px;
   font-size: 24px;
 }
 
-.prescriptions-body {
-  // background-color: #F1F1F1;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  position: sticky;
+.position-style {
+  // padding-left: 51%;
+  // padding-bottom: 51%;
+  width: 100%;
+  text-align: right;
+
+}
+.fa-list-ul-style{
+  color: white;
 }
 
-.card-category {
+.prescription {
+  height: 550px;
   background-color: white;
   background-size: cover;
   background-position: center;
-  height: 25%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -51,28 +58,41 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 2% 8% 3% 8%;
+  margin: 5% 8% 3% 8%;
   padding: 2%;
-  z-index: 2;
 }
 
-.prescription-name {
-  font-size: 100%;
+.img-card {
+  margin-bottom: 2%;
+  height: 57%;
+  border-radius: 2%;
+  padding: 5%;
+}
+
+.show-prescription-name {
+  font-size: 130%;
   font-weight: bold;
+  margin-bottom: 5%;
 }
 
-.prescription-date {
-  font-size: 75%;
+.show-prescription-date {
+  font-size: 100%;
   color:#898A8F;
+  margin: 4% 0%;
 }
 
-.btn-outline-style-show {
+.make-an-order-and-delete {
+  margin-top: 8%;
+
+}
+
+.btn-outline-style-make-an-order {
   border: dashed 0.5px #000000;
   border-radius: 16%;
   border-color: #898A8F;
   font-size: 70%;
   margin: 0% 2% 0% 0%;
-  padding: 2% 12%;
+  padding: 2% 5%;
 }
 
 .btn-outline-style-delete {
@@ -81,12 +101,13 @@
   border-color: #898A8F;
   font-size: 70%;
   margin: 0% 0% 0% 2%;
-  padding: 2% 5%;
+  padding: 2% 12%;
 }
 
-.show-delete {
-  padding: 2%;
-}
+
+
+
+
 
 
 

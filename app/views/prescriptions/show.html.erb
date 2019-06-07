@@ -1,16 +1,28 @@
-<h1>Prescriptions#show</h1>
-
-<h2>Prescription : <%= @prescription.prescription_name %></h2>
-
-<%= cl_image_tag @prescription.image, height: 400, width: 400 %>
-
-<h3>Validity of the prescription :</h3>
-<p>Prescription date : <%= @prescription.prescription_start_date %></p>
-
-<p>Expiration date : <%= @prescription.prescription_expiry_date %></p>
-
-<%= link_to "Make an order", new_prescription_order_path(@prescription) %>
-
-<%= link_to "Delete", prescription_path, method: :delete %>
-
-<%= link_to "Back to index", prescriptions_path %>
+<div class="prescriptions-container">
+  <%= render 'shared/navbar' %>
+  <div class="prescriptions-header">
+    <div class="text-my-prescriptions">
+      <%= link_to prescriptions_path do%>
+      <i class="fas fa-chevron-left chevron-style"></i>
+      <%end%>
+      <h2 class="h2-style"><%= @prescription.prescription_name %></h2>
+    </div>
+  </div>
+</div>
+<div class="prescription">
+  <div class="img-card"><%= cl_image_tag @prescription.image %></div>
+  <div class="show-prescription-name">Validity of the prescription :</div>
+  <div class="show-prescription-date">Prescription date : <%= @prescription.prescription_start_date %></div>
+  <div class="show-prescription-date">Expiration date : <%= @prescription.prescription_expiry_date %></div>
+  <div class="make-an-order-and-delete">
+    <button type="button" class="btn btn-outline-light btn-outline-style-make-an-order" ><%= link_to "Make an order", new_prescription_order_path(@prescription) %></button>
+    <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Delete", prescription_path, method: :delete %></button>
+  </div>
+</div>
+<div> <!-- display:none => element.style.display="block" -->
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+</div>

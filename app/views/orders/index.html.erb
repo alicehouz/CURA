@@ -11,7 +11,7 @@
       <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
       <p class="card-text">Date order : <%= order.order_date %></p>
       <p><%= link_to "show", order_path(order) %></p>
-      <p><%= link_to "delete", order_path(order), method: :delete %></p>
+      <p><%= link_to "delete", prescription_order_path(order.prescriptions.first, order.id), method: :delete %></p>
     </div>
   </div>
   <% end %>
@@ -23,6 +23,8 @@
        <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
        <p class="card-text">Date order : <%= order.order_date %></p>
        <p class="card-text">Delivery address :<%= order.street_name %>,<%= order.zip_code %>,<%= order.city %> </p>
+       <p><%= link_to "show", order_path(order) %></p>
+       <p><%= link_to "delete", prescription_order_path(order.prescriptions.first, order.id), method: :delete %></p>
       </div>
     </div>
   <% end %>
