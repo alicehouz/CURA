@@ -1,6 +1,9 @@
+
 <div class= "welcome-container">
+   <%= render 'shared/navbar' %>
 
   <div class="welcome-header">
+
     <%= image_tag ("circle.png"), class: "circle-top-left" %>
     <div class ="text-welcome-user">
         <% if user_signed_in? %>
