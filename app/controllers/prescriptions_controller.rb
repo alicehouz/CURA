@@ -25,6 +25,11 @@ class PrescriptionsController < ApplicationController
     @prescription = Prescription.find(params[:prescription_id])
   end
 
+
+  def show_after_order
+    @prescription = Prescription.find(params[:prescription_id])
+  end
+
   def destroy
     @prescription = Prescription.find(params[:id])
     @prescription.destroy

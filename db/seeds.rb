@@ -17,7 +17,7 @@ User.create!(
   password: '123456',
   first_name: 'Jean',
   last_name: 'Dupont',
-  street_name: '2 rue paradis'
+  street_name: '2 rue paradis',
   zip_code: '13000',
   city: 'Marseille',
   phone_number: '0707070707',

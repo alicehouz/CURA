@@ -1,0 +1,28 @@
+
+<div class="order-contaier">
+  <div class="order-header">
+    <div class="placeorder d-flex justify-content-start">
+      <%= link_to welcome_path do%>
+      <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+      <%end%>
+      <h2 class="text-header-order">Placing an order</h2>
+    </div>
+    <div class="order-steps">
+      <%= image_tag ("3.png"), class: "steps-order" %>
+    </div>
+  </div>
+
+
+  <div class="order-body">
+Your order is submitted , please check the status <br>
+<%= @prescription.orders.last.order_status %>
+
+    </div>
+
+
+
+
+
+
+  </div>
+</div>

@@ -116,3 +116,56 @@ color: white;
 margin: 0px;
 font-size: 12px;
 }
+
+
+.form-order-address {
+
+  background-color: red;
+  width: 40%;
+  height: 50px;
+}
+
+.inputs-order-address{
+
+width: 40%;
+  height: 50px;
+
+
+}
+
+.modal-content{
+height: 454px;
+    position: absolute;
+    top: -294px;
+
+  }
+
+.selectaddr {
+
+       position: absolute;
+    left: -2px;
+    background-color: #3A49CC;
+    text-align: center;
+    border-radius: 12px;
+    height: 25px;
+    outline: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+    font-size: 14px;
+    width: 178px;
+     outline: none;
+     border: none;
+
+}
+
+.form-control {
+
+ display: inline-block;
+ width: 193%;
+
+  margin:0;
+  border: none;
+}
+

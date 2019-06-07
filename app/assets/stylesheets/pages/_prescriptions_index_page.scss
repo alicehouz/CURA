@@ -4,6 +4,7 @@
   position: sticky;
   top: 0;
   margin-bottom: 2%;
+  z-index: 2;
 }
 
 .prescriptions-header {
@@ -30,12 +31,18 @@
   font-size: 24px;
 }
 
+// .circle-style {
+//   size: 4%;
+//   padding: 2% 2% 0% 0%;
+// }
+
 .prescriptions-body {
   // background-color: #F1F1F1;
   height: auto;
   display: flex;
   flex-direction: column;
   position: sticky;
+  z-index: 1;
 }
 
 .card-category {

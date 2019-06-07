@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
     @order.order_date = Date.today
     if @order.save
       OrdersPrescription.create!(prescription_id: @prescription.id, order_id: @order.id)
-      redirect_to orders_path
+      redirect_to prescription_show_after_order_path
     else
       render :new
     end
