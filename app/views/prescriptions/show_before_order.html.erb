@@ -1,1 +1,43 @@
-blablala
+<!-- *************************placing order one***************************** -->
+ <div class="order-contaier">
+  <div class="order-header">
+    <div class="placeorder d-flex justify-content-start">
+      <%= link_to welcome_path do%>
+      <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+      <%end%>
+      <h2 class="text-header-order">Placing an order</h2>
+    </div>
+    <div class="order-steps">
+      <%= image_tag ("1.png"), class: "steps-order" %>
+    </div>
+  </div>
+  <div class="order-body">
+    <div class="white-container">
+      <p class="orderbody-text"> Scanned prescription</p>
+      <div class="links-scan d-flex">
+        <%= link_to welcome_path do%>
+        <div class="rescan-div d-flex">
+          <%= image_tag ("reload.png"), class: "rescan-photo" %>
+          <p class="rescan">Rescan</p>
+        </div>
+        <%end%>
+        <div class="add-div">
+          <%= link_to welcome_path do%>
+          <p class="text-scan">+ Add another product</p>
+          <%end%>
+        </div>
+      </div>
+      <div class="image-uploaded">
+        <%= cl_image_tag @prescription.image, height: 180, width: 280, crop: :fill %>
+      </div>
+      <!-- <div class="saveforlater">
+        <%= link_to welcome_path do%> <p class="savetext">Save in my prescriptions</p><%end%>
+      </div>
+ -->
+
+      <div class="white-footer">
+         <button type="button" class="btn btn-outline-light btn-outline-style-make-an-order" ><%= link_to "Make an order", new_prescription_order_path(@prescription) %></button>
+      </div>
+    </div>
+  </div>
+</div>
