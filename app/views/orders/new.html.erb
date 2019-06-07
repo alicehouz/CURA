@@ -1,62 +1,59 @@
-<!-- <h1>Orders#new</h1>
-
-
-<%= simple_form_for [@prescription, @order] do |f| %>
-
-<p>Delivery address</p>
-<%= f.input :street_name, input_html: { value: current_user.street_name } %>
-<%= f.input :zip_code, input_html: { value: current_user.zip_code } %>
-<%= f.input :city, input_html: { value: current_user.city } %>
-<%= f.submit %>
-<% end %>
- -->
-
-
-
-<!-- *************************placing order one***************************** -->
- <div class="order-contaier">
-  <div class="order-header">
-    <div class="placeorder d-flex justify-content-start">
+<div class="address-contaier">
+  <div class="address-header">
+    <div class="placeaddress d-flex justify-content-start">
       <%= link_to welcome_path do%>
-      <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+      <%= image_tag ("left-arrow.png"), class: "arrow-address" %>
       <%end%>
-      <h2 class="text-header-order">Placing an order</h2>
+      <h2 class="text-header-address">Placing an order</h2>
     </div>
-    <div class="order-steps">
-      <%= image_tag ("1.png"), class: "steps-order" %>
+    <div class="address-steps">
+      <%= image_tag ("2.png"), class: "steps-address" %>
     </div>
   </div>
-  <div class="order-body">
-    <div class="white-container">
-      <p class="orderbody-text"> <%= current_user.email %></p>
-      <div class="links-scan d-flex">
-        <%= link_to welcome_path do%>
-        <div class="rescan-div d-flex">
-          <%= image_tag ("reload.png"), class: "rescan-photo" %>
-          <p class="rescan">Rescan</p>
-        </div>
-        <%end%>
-        <div class="add-div">
-          <%= link_to welcome_path do%>
-          <p class="text-scan">+ Add another product</p>
-          <%end%>
-        </div>
-      </div>
-      <div class="image-uploaded">
-        <%= cl_image_tag @prescription.image, height: 180, width: 280, crop: :fill %>
-      </div>
-      <div class="saveforlater">
-        <%= link_to welcome_path do%> <p class="savetext">Save in my prescriptions</p><%end%>
-      </div>
+  <div class="newaddress-order">
+    <button type="button" class="addnew" data-toggle="modal" data-target="#exampleModal">
+    + Add new Address
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title" id="exampleModalLabel">Modal title</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-order-address">
+              <%= simple_form_for [@prescription, @order] do |f| %>
+              <div class="inputs-order-address">
+              <%= f.input :street_name, input_html: { value: current_user.street_name } %>
+              <%= f.input :zip_code, input_html: { value: current_user.zip_code } %>
+              <%= f.input :city, input_html: { value: current_user.city } %>
+              </div>
+
+              <div class="modal-footer">
 
 
-      <div class="white-footer">
-        <%= link_to order_placement_2_path do%>
-        <%= image_tag ("right.png"), class: "next-order" %>
-        <%end%>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
+  </div>
+  <div class="address-body">
+    <p class="addressbody-text">Your saved addresses</p>
+    <div class="white-container-address">
+      <div class="select-this-address">
+        <%= link_to welcome_path do%> <p class="select-text">Seelect this address</p><%end%>
+      </div>
+    </div>
+  </div>
+  <div class="white-footer-address">
+
+           <%= f.submit %>
+              <% end %>
+
   </div>
 </div>
-<!-- *************************first step end************************************ -->
-
