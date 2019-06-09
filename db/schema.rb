@@ -47,10 +47,16 @@ ActiveRecord::Schema.define(version: 2019_06_09_135409) do
     t.string "name"
     t.string "address"
     t.string "phone_number"
+    t.bigint "orders_id"
+    t.string "email"
+    t.string "password"
+    t.time "opening_time"
+    t.time "closing_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.index ["orders_id"], name: "index_pharmacies_on_orders_id"
   end
 
   create_table "prescriptions", force: :cascade do |t|
@@ -92,4 +98,5 @@ ActiveRecord::Schema.define(version: 2019_06_09_135409) do
   add_foreign_key "orders", "users"
   add_foreign_key "orders_prescriptions", "orders"
   add_foreign_key "orders_prescriptions", "prescriptions"
+  add_foreign_key "pharmacies", "orders", column: "orders_id"
 end
