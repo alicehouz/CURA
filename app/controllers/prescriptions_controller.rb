@@ -21,10 +21,9 @@ class PrescriptionsController < ApplicationController
     @prescription = Prescription.find(params[:id])
   end
 
-   def show_before_order
+  def show_before_order
     @prescription = Prescription.find(params[:prescription_id])
   end
-
 
   def show_after_order
     @prescription = Prescription.find(params[:prescription_id])
@@ -36,13 +35,9 @@ class PrescriptionsController < ApplicationController
     redirect_to prescriptions_path
   end
 
-
-
   private
 
   def prescription_params
     params.require(:prescription).permit(:image, :image_cache, :prescription_name, :prescription_start_date, :prescription_expiry_date)
   end
-
-
 end

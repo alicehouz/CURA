@@ -12,16 +12,21 @@
     </div>
   </div>
 
-
-  <div class="order-body">
-Your order is submitted , please check the status <br>
-<%= @prescription.orders.last.order_status %>
-
+<div>
+  <% if @prescription.orders.last.order_status == "pending" %>
+    <div class="order-body">
+     <p>Your order is submitted , please check the status</p>
+     <%= @prescription.orders.last.order_status %>
     </div>
+  <% end %>
+  <% if @prescription.orders.last.order_status == "pharmacie accept"  %>
+   <div class="order-body">
+    <h1>Pharmacy accept your order</h1>
+    <p>Validation & paiement </p>
+   </div>
+  <% end %>
 
-
-
-
+</div>
 
 
   </div>
