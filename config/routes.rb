@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pharmacies/index'
+  get 'pharmacies/show'
   root to: 'pages#home'
   resources :prescriptions, only: [:index, :new, :create, :show, :destroy] do
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_100659) do
+ActiveRecord::Schema.define(version: 2019_06_09_135409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2019_06_04_100659) do
     t.integer "delivery_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "pharmacie_id"
+    t.index ["pharmacie_id"], name: "index_orders_on_pharmacie_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -39,6 +41,16 @@ ActiveRecord::Schema.define(version: 2019_06_04_100659) do
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_orders_prescriptions_on_order_id"
     t.index ["prescription_id"], name: "index_orders_prescriptions_on_prescription_id"
+  end
+
+  create_table "pharmacies", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "prescriptions", force: :cascade do |t|
@@ -76,6 +88,7 @@ ActiveRecord::Schema.define(version: 2019_06_04_100659) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "orders", "pharmacies", column: "pharmacie_id"
   add_foreign_key "orders", "users"
   add_foreign_key "orders_prescriptions", "orders"
   add_foreign_key "orders_prescriptions", "prescriptions"
