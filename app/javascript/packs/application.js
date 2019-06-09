@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../plugins/slick";
 
 
+
 // ******************unlockslider****************
 
 // ******************unlock****************
@@ -70,3 +71,9 @@ inputRange.addEventListener('mousestart', unlockStartHandler, false);
 inputRange.addEventListener('mouseup', unlockEndHandler, false);
 inputRange.addEventListener('touchend', unlockEndHandler, false);
 // ******************unlock****************
+=======
+import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
+
+import { initMapbox } from '../plugins/init_mapbox';
+
+initMapbox();
