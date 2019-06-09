@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="image-uploaded">
-        <%= cl_image_tag @prescription.image, height: 180, width: 280, crop: :fill %>
+        <%= cl_image_tag @prescription.image, height: 320, width: 250, crop: :fill %>
       </div>
       <!-- <div class="saveforlater">
         <%= link_to welcome_path do%> <p class="savetext">Save in my prescriptions</p><%end%>
@@ -36,7 +36,10 @@
  -->
 
       <div class="white-footer">
-         <button type="button" class="btn btn-outline-light btn-outline-style-make-an-order" ><%= link_to "Make an order", new_prescription_order_path(@prescription) %></button>
+        <%= link_to  new_prescription_order_path(@prescription) do%>
+        <%= image_tag ("right.png") %>
+        <% end %>
+
       </div>
     </div>
   </div>

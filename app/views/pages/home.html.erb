@@ -3,10 +3,13 @@
     <%= image_tag "logo-cura.png", class: "logo-cura" %>
     <p class="tagline">Medicine at your doorstep</p>
     <div class="links-emplacement" >
-      <%= link_to  "Start", new_user_session_path, class: "btn-white" %>
 
-      <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: "btn-white" %>
-      <%= link_to  ("Not a member?<strong> Sign up</strong>").html_safe, new_user_registration_path, class: "signup-link" %>
+
+            <div class="center-xy">
+           <em> <p class ="slidetext">Slide to open</p></em>
+           <input type="range" value="0" class="pullee"   target="_blank" />
+        </div>
+
     </div>
   </div>
 </div>
@@ -22,3 +25,9 @@ const links = document.querySelector(".links-emplacement");
   ,1000);
 
 </script>
+
+
+<!--<%= link_to  "Start", new_user_session_path, class: "btn-white" %>
+
+      <%= link_to  "Sign out", destroy_user_session_path, method: :delete, class: "btn-white" %>
+      <%= link_to  ("Not a member?<strong> Sign up</strong>").html_safe, new_user_registration_path, class: "signup-link" %> -->

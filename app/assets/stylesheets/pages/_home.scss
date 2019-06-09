@@ -36,3 +36,123 @@
   padding-top: 25px;
 }
 
+
+// ************slider CSS**********************
+
+
+$size: 32;
+
+@mixin track($color: white, $radius: 0) {
+    &::-webkit-slider-runnable-track {
+        @content;
+        border-radius: $radius;
+        background-color: $color;
+    }
+    &::-moz-range-track {
+        @content;
+        border-radius: $radius;
+        background-color: $color;
+    }
+    &::-moz-focus-outer {
+        border: 0;
+    }
+    &::-ms-track {
+        border: 0;
+        @content;
+        border-radius: $radius;
+        background-color: $color;
+        color: transparent;
+    }
+    &::-ms-fill-lower, &::-ms-fill-upper {
+        background-color: transparent;
+    }
+    &::-ms-tooltip {
+        display: none;
+    }
+}
+
+@mixin thumb() {
+    &::-webkit-slider-thumb {
+        appearance: none;
+        @content;
+    }
+    &::-moz-range-thumb {
+        border: 0;
+        @content;
+    }
+    &::-ms-thumb {
+        @content;
+    }
+}
+
+.pullee {
+    width: 8rem;
+    appearance: none;
+    background-color: transparent;
+
+
+    // handle active states
+    &:active {
+        @include thumb() {
+            transform: scale(1.1);
+            cursor: -webkit-grabbing;
+            cursor: -moz-grabbing;
+
+        }
+    }
+
+    // accessibility
+    &:focus {
+        outline: none;
+    }
+
+    // thumb styles
+    @include thumb() {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background: #1E48A9;
+        transform-origin: 60% 60%;
+        transform: scale(1);
+        transition: transform ease-out 30ms;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+
+    }
+
+    // track styles
+    @include track(rgba(255, 255, 255, 0.5), 1rem) {
+
+        height: 6vh;
+        padding: .25rem;
+        box-sizing: content-box;
+
+
+    }
+}
+
+html {
+    font-size: $size + px;
+    text-align: center;
+}
+
+
+
+.center-xy {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slidetext{
+  font-family: "poppins";
+  font-size: 14px;
+  position: absolute;
+    left: 105px;
+    top: 20px;
+    color: rgba(0, 0, 0, 0.5);
+
+}
+
