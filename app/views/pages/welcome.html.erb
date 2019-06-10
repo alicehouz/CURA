@@ -3,15 +3,16 @@
 
     <div class ="text-welcome-user">
       <% if user_signed_in? %>
+
       <h2 id="font-welcome">Bienvenue sur Cura...</h2>
       <h2 id="name-user-welcome" > <mark><%=current_user.first_name%></mark></h2>
         <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Votre addresse de livraison: <%= current_user.street_name%>, <%current_user.zip_code %><%current_user.city %></p>
+
+     <!--  <div><a  class="button-profile" id="profile-icon" data-toggle="modal" data-target="#exampleModal"><%= image_tag ("user.png"), class: "profile-logo grow" %></a> </div> -->
+      <!-- <div> <%= image_tag(current_user.avatar.url, id: "avatar-currentuser") %></div> -->
       <%else%>
       <h2 id="font-welcome-user">Bienvenue sur Cura</h2>
       <h2 id="name-user-welcome"><strong>Our dear patient</strong></h2>
-      <%= link_to welcome_path do %>
-      <%= @user.current_user.avatar %>
-      <%end%>
       <%end%>
     </div>
   </div>
@@ -23,11 +24,11 @@
         <p class="scan-para">votre ordonnance</p>
       </div>
     </div>
-    <div class="schedule ">
+    <div class="schedule">
       <a class="button-welcome" ><%= image_tag ("calendar.png"), class: "schedule-photo grow" %></a>
       <div class ="text-welcome" >
         <p class ="scan-text">Plannifiez</p>
-        <p class="scan-para">votre ordonnance</p>
+        <p class="scan-para">votre commande</p>
       </div>
     </div>
     <div class="search ">
@@ -78,10 +79,10 @@
             </div>
 
 
-            <%= simple_form_for @prescription do |f| %>
+            <%= simple_form_for @prescription do |pop| %>
 
-            <%= f.input :image, input_html: { accept: "image/*", capture: "camera" ,class: "file" }, label: false %>
-            <%= f.input :image_cache, as: :hidden, class: "fileattached" %>
+            <%= pop.input :image, input_html: { accept: "image/*", capture: "camera" ,id: "file" }, label: false %>
+            <%= pop.input :image_cache, as: :hidden, class: "fileattached" %>
 
          <button type="submit" class="modal-title" id="clouddiv">
 
@@ -102,7 +103,7 @@
 
 <script>
 
-  const input = document.querySelector(".file");// Selection l'input
+  const input = document.querySelector("#file");// Selection l'input
   const submit = document.querySelector("#clouddiv");// Selection button submit
 
   const clickUpload = () => {
