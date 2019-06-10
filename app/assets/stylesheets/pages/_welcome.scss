@@ -59,6 +59,7 @@ z-index: 2;
 align-items: center;
 justify-content: space-around;
 position: sticky;
+text-align: center;
 }
 .welcome-body{
 height: 66vh;
@@ -279,6 +280,7 @@ outline: 0
   background-color: #3A49CC;
   border-radius: 26px 26px 0px 0px;
   padding: 0;
+
 }
 
 mark {
@@ -298,14 +300,14 @@ mark {
 }
 
 .homeicon, .ordersicon, .logicon {
-  width: 100%;
+  width: 33%;
   margin: 10px 0px 10px;
 }
 
 .presicon {
-  width: 85%;
+  width: 35%;
   margin: 10px 0px 10px;
-  height: 46%;
+
 }
 
 .list {
