@@ -1,7 +1,6 @@
 .welcome-header {
 height: 27vh;
 }
-
 .text-welcome-user {
   position: sticky;
 }
@@ -25,10 +24,12 @@ height: 27vh;
 }
 
 #font-address-home{
-  font-size: 13px;
-  color: grey;
-  margin-bottom: 0;
+font-size: 13px;
+color: grey;
+margin-bottom: 0;
 }
+
+
 
 .circle-bottom-right {
   width: 30%;
@@ -99,6 +100,18 @@ height: 27vh;
 }
 
 .search {
+
+text-align: center;
+border-radius: 12px;
+box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
+margin-bottom: 15px;
+width: 74%;
+height: 16vh;
+text-align: center;
+border-radius: 12px;
+}
+.scan-photo, .schedule-photo, .search-photo{
+  width: 14%;
   text-align: center;
   border-radius: 12px;
   box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
@@ -107,6 +120,7 @@ height: 27vh;
   height: 16vh;
   text-align: center;
   border-radius: 12px;
+
 }
 
 .scan-photo, .schedule-photo, .search-photo {
@@ -118,6 +132,52 @@ height: 27vh;
   width: 15%;
   margin: 7px 7px 0px ;
 }
+
+.cloud-upload {
+    width: 14%;
+    position: absolute;
+    top: 95px;
+    left: 171px;
+
+}
+
+
+
+#upload-text{
+
+
+position: absolute;
+    top: 134px;
+    left: 170px;
+}
+
+
+#cameradiv{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0px;
+}
+#clouddiv{
+outline: none;
+border: none;
+  opacity: 0;
+  overflow: hidden;
+}
+.modal-dialog{
+margin-top: 426px;
+}
+.modal-container{
+position: relative;
+display: flex;
+flex-direction: column;
+width: 100%;
+pointer-events: auto;
+background-color: #fff;
+background-clip: padding-box;
+border-radius: 11px;
+outline: 0 
+ }
 
 .cloud-photo {
   width: 32%;
@@ -136,6 +196,7 @@ height: 27vh;
   flex-direction: column;
   align-items: center;
   margin: 2px 102px 2px;
+
 }
 
 .modal-dialog {
@@ -162,6 +223,23 @@ height: 27vh;
 }
 
 .pop-up-header {
+
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+padding: 4px;
+border-bottom: 1px solid #dee2e6;
+border-top-left-radius: 2px;
+border-top-right-radius: 2px;
+}
+.pop-up-body{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 4px;
+    margin: 0px;
+    height: 70px;
+
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -169,6 +247,7 @@ height: 27vh;
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+
 }
 
 .pop-up-body {
@@ -196,7 +275,6 @@ height: 27vh;
   color: #5B5A5A;
   font-size: 16px;
 }
-
 .question {
   font-size: 14px;
 }
@@ -213,6 +291,7 @@ height: 27vh;
 }
 
 .footer-menu {
+
   list-style: none;
   float: left;
   width: 100%;
@@ -222,6 +301,7 @@ height: 27vh;
   background-color: #3A49CC;
   border-radius: 26px 26px 0px 0px;
   padding: 0;
+
 }
 
 mark {
@@ -230,16 +310,43 @@ mark {
 }
 
 .file {
+      width: 53%;
+    height: 20vh;
+    position: absolute;
+    left: 72px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+
+.file {
   color: transparent;
 }
 
 .homeicon, .ordersicon, .logicon {
   width: 100%;
   margin: 0px 0px 10px;
+  }
 
+.homeicon, .ordersicon, .logicon{
+width: 100%;
+margin: 0px;
 }
-
 .presicon {
+
+width: 85%;
+margin: 0px;
+height: 46%;
+}
+.list {
+margin: 0px;
+width: 20px;
+}
+.grow:active {
+-webkit-transform: scale(1.5);
+-ms-transform: scale(1.5);
+transform: scale(1.5);
+
   width: 105%;
   margin: 0px 0px 10px;
   height: 46%;
@@ -254,4 +361,5 @@ mark {
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
   transform: scale(1.5);
+
 }
