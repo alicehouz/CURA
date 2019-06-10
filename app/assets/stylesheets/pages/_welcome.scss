@@ -71,7 +71,7 @@
   color: #565656;
   font-weight: bold;
   font-size: 16px;
-  margin: 0px;
+  margin: 29px 0px 0px;
 }
 
 .scan-para {
@@ -92,7 +92,6 @@
   text-align: center;
   border-radius: 12px;
   box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
-  /* margin-left: 8px; */
   margin-bottom: 15px;
   text-align: center;
   border-radius: 12px;
@@ -112,6 +111,7 @@
 .scan-photo, .schedule-photo, .search-photo {
   width: 18%;
   margin-bottom: -11px;
+  margin-bottom: -27px;
 }
 
 .camera-photo {
@@ -235,13 +235,13 @@ mark {
 
 .homeicon, .ordersicon, .logicon {
   width: 100%;
-  margin: 0px 0px 10px;
+  margin: 10px 0px 10px;
 
 }
 
 .presicon {
   width: 105%;
-  margin: 0px 0px 10px;
+  margin: 10px 0px 10px;
   height: 46%;
 }
 
