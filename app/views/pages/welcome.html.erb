@@ -1,21 +1,17 @@
-
-
-
- <div class= "welcome-container">
+<div class= "welcome-container">
   <div class="welcome-header">
-
     <div class ="text-welcome-user">
       <% if user_signed_in? %>
       <h2 id="font-welcome" >Welcome to Cura...</h2>
       <h2 id="name-user-welcome" > <mark><%=current_user.first_name%></mark></h2>
-        <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Your delivery address: <%= current_user.street_name%>, <%current_user.zip_code %><%current_user.city %></p>
+      <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Your delivery address: <%= current_user.street_name%>, <%current_user.zip_code %><%current_user.city %></p>
       <%else%>
       <h2 id="font-welcome-user" >Welcome to Cura</h2>
       <h2 id="name-user-welcome"><strong>Our dear patient</strong></h2>
-
       <%end%>
     </div>
   </div>
+
   <div class="welcome-body">
     <div class="scan ">
       <a  class="button-welcome" id="scan-icon" data-toggle="modal" data-target="#exampleModal"><%= image_tag ("scan.png"), class: "scan-photo grow" %></a>
@@ -40,27 +36,8 @@
     </div>
   </div>
 
+<%= render 'shared/footer' %>
 
-  <div class="welcome-footer-home">
-    <ul class="footer-menu d-flex  justify-content-around"">
-       <%= link_to welcome_path do%>
-      <li class="list"><%= image_tag ("home_icon.png"), class: "homeicon grow" %></li>
-      <% end %>
-      <%= link_to orders_path do%>
-      <li class="list"><%= image_tag ("orders-white.png"), class: "ordersicon grow" %></li>
-       <% end %>
-       <%= link_to prescriptions_path do%>
-      <li class="list"><%= image_tag ("pres-white.png"), class: "presicon grow" %></li>
-         <% end %>
-      <%= link_to destroy_user_session_path, method: :delete do%>
-       <li class="list"><%= image_tag ("logout-white.png"), class: "logicon grow" %></li>
-       <% end %>
-
-
-    </ul>
-
-
-  </div>
   <div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -72,19 +49,14 @@
             </div>
           </div>
           <div class="pop-up-body">
-
-
             <%= simple_form_for @prescription do |f| %>
-
             <%= f.input :image, input_html: { accept: "image/*", capture: "camera" , }, label: false, class: "file"%>
             <%= f.input :image_cache, as: :hidden, class: "fileattached" %>
-
-         <button type="submit" class="modal-title" id="clouddiv">
+            <button type="submit" class="modal-title" id="clouddiv">
             <%= image_tag ("cloud-upload.png"), class: "cloud-photo" %>
             <p id = "upload-text">Upload</p>
             </button>
             <% end %>
-
           </div>
         </div>
         <div class="pop-up-footer">
@@ -92,3 +64,8 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+
+

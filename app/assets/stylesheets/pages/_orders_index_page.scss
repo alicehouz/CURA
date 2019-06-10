@@ -1,4 +1,4 @@
-.prescriptions-container {
+.orders-container {
   background-color: #3A49CC;
   // border-radius: 0px 0px 24px 24px;
   position: sticky;
@@ -7,11 +7,11 @@
   z-index: 2;
 }
 
-.prescriptions-header {
+.orders-header {
   height: 11vh;
 }
 
-.text-my-prescriptions {
+.text-my-orders {
   top: 30%;
   left: 8%;
   font-size: 20%;
@@ -38,7 +38,7 @@
 //   padding: 2% 2% 0% 0%;
 // }
 
-.prescriptions-body {
+.orders-body {
   // background-color: #F1F1F1;
   height: 85vh;
   display: flex;
@@ -65,12 +65,12 @@
   z-index: 2;
 }
 
-.prescription-name {
+.order-name {
   font-size: 100%;
   font-weight: bold;
 }
 
-.prescription-date {
+.order-date {
   font-size: 75%;
   color:#898A8F;
 }

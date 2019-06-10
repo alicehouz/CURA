@@ -34,24 +34,27 @@ margin-top: 23px;
 }
 .welcome-footer-home{
 height: 7vh;
-position: absolute;
 margin: auto;
 bottom: 0px;
 z-index: -50;
 width: 100%;
 border-radius: 21px 21px 0px 0px;
 box-shadow: 3px 9px 35px 22px rgba(86, 86, 86, 0.1);
-background-color: white;
+background-color: #3A49CC;
+z-index: 2;
+align-items: center;
+justify-content: space-around;
+position: sticky;
 }
 .welcome-body{
-height: 55vh;
-width: 94%;
+height: 66vh;
+width: 100%;
 display: flex;
-position: absolute;
 top: 217px;
 right: 16px;
 flex-direction: column;
 align-items: center;
+
 }
 .scan {
 width: 74%;
@@ -232,9 +235,12 @@ color :white;
 }
 
 
-.grow:active
-{
-        -webkit-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-        transform: scale(1.5);
+.grow {
+  max-width: 25px;
+
+&:active {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+  }
 }
