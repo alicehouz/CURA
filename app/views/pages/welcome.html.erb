@@ -2,11 +2,17 @@
   <div class="welcome-header">
     <div class ="text-welcome-user">
       <% if user_signed_in? %>
-      <h2 id="font-welcome" >Welcome to Cura...</h2>
+
+      <h2 id="font-welcome">Bienvenue sur Cura...</h2>
       <h2 id="name-user-welcome" > <mark><%=current_user.first_name%></mark></h2>
-      <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Your delivery address: <%= current_user.street_name%>, <%current_user.zip_code %><%current_user.city %></p>
+
+        <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Votre addresse de livraison: <%= current_user.street_name%>, <%current_user.zip_code %><%current_user.city %></p>
+
+     <!--  <div><a  class="button-profile" id="profile-icon" data-toggle="modal" data-target="#exampleModal"><%= image_tag ("user.png"), class: "profile-logo grow" %></a> </div> -->
+      <!-- <div> <%= image_tag(current_user.avatar.url, id: "avatar-currentuser") %></div> -->
+
       <%else%>
-      <h2 id="font-welcome-user" >Welcome to Cura</h2>
+      <h2 id="font-welcome-user">Bienvenue sur Cura</h2>
       <h2 id="name-user-welcome"><strong>Our dear patient</strong></h2>
       <%end%>
     </div>
@@ -16,27 +22,28 @@
     <div class="scan ">
       <a  class="button-welcome" id="scan-icon" data-toggle="modal" data-target="#exampleModal"><%= image_tag ("scan.png"), class: "scan-photo grow" %></a>
       <div class ="text-welcome" >
-        <p class ="scan-text">Scan </p>
-        <p class="scan-para"> your prescription </p>
+        <p class ="scan-text">Scannez</p>
+        <p class="scan-para">votre ordonnance</p>
       </div>
     </div>
-    <div class="schedule ">
+    <div class="schedule">
       <a class="button-welcome" ><%= image_tag ("calendar.png"), class: "schedule-photo grow" %></a>
       <div class ="text-welcome" >
-        <p class ="scan-text">Schedule</p>
-        <p class="scan-para"> your prescription </p>
+        <p class ="scan-text">Plannifiez</p>
+        <p class="scan-para">votre commande</p>
       </div>
     </div>
     <div class="search ">
       <a class="button-welcome" ><%= image_tag ("search.png"), class: "search-photo grow" %></a>
       <div class ="text-welcome" >
-        <p class ="scan-text">Search</p>
-        <p class="scan-para"> other product </p>
+        <p class ="scan-text">Recherchez</p>
+        <p class="scan-para">un autre produit</p>
       </div>
     </div>
   </div>
 
 <%= render 'shared/footer' %>
+
 
   <div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -49,12 +56,25 @@
             </div>
           </div>
           <div class="pop-up-body">
-            <%= simple_form_for @prescription do |f| %>
-            <%= f.input :image, input_html: { accept: "image/*", capture: "camera" , }, label: false, class: "file"%>
-            <%= f.input :image_cache, as: :hidden, class: "fileattached" %>
-            <button type="submit" class="modal-title" id="clouddiv">
+
+            <div class="attachfile">
+               <%= image_tag ("cloud-upload.png"), class: "cloud-upload" %>
+               <p id = "upload-text">Upload</p>
+
+            </div>
+
+
+            <%= simple_form_for @prescription do |pop| %>
+
+            <%= pop.input :image, input_html: { accept: "image/*", capture: "camera" ,id: "file" }, label: false %>
+            <%= pop.input :image_cache, as: :hidden, class: "fileattached" %>
+
+         <button type="submit" class="modal-title" id="clouddiv">
+
+
+
             <%= image_tag ("cloud-upload.png"), class: "cloud-photo" %>
-            <p id = "upload-text">Upload</p>
+            <p id = "upload-text">Télécharger</p>
             </button>
             <% end %>
           </div>
@@ -64,8 +84,21 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
 
 
+
+<script>
+
+  const input = document.querySelector("#file");// Selection l'input
+  const submit = document.querySelector("#clouddiv");// Selection button submit
+
+  const clickUpload = () => {
+    submit.click();
+  }
+
+  input.addEventListener('change', clickUpload);
+
+
+
+</script>
 

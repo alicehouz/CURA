@@ -5,7 +5,7 @@
       <%= link_to welcome_path do%>
       <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
       <%end%>
-      <h2 class="text-header-order">Placing an order</h2>
+      <h2 class="text-header-order">Order status</h2>
     </div>
     <div class="order-steps">
       <%= image_tag ("3.png"), class: "steps-order" %>
@@ -17,13 +17,62 @@
     <div class="order-body">
      <p>Your order is submitted , please check the status</p>
      <%= @prescription.orders.last.order_status %>
+    <div class="card" style="width: 18rem;">
+     <ul class="list-group list-group-flush">
+      <li class="list-group-item">La pharmacie a accepter votre commande<div class="spinner-border text-primary" role="status">
+       <span class="sr-only">Loading...</span>
+       </div></li>
+      <li class="list-group-item">Validation & paiement<i class="far fa-circle"></i></li>
+      <li class="list-group-item">La pharmacie prépare votre commande<i class="far fa-circle"></i></li>
+      <li class="list-group-item">Votre commande est en cours de livraison<i class="far fa-circle"></i></li>
+     </ul>
     </div>
+  </div>
+
   <% end %>
+
   <% if @prescription.orders.last.order_status == "pharmacie accept"  %>
    <div class="order-body">
     <h1>Pharmacy accept your order</h1>
     <p>Validation & paiement </p>
    </div>
+   <div class="card" style="width: 18rem;">
+     <ul class="list-group list-group-flush">
+      <li class="list-group-item">La pharmacie a accepter votre commande<i class="far fa-check-circle"></i></li>
+      <li class="list-group-item">Validation & paiement<i class="far fa-circle"></i></li>
+      <li class="list-group-item">La pharmacie prépare votre commande<i class="far fa-circle"></i></li>
+      <li class="list-group-item">Votre commande est en cours de livraison<i class="far fa-circle"></i></li>
+     </ul>
+    </div>
+    <div
+     id="map"
+     style="width: 100%;
+     height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+
+   <div class="card" style="width: 18rem;">
+   <div class="card-header">
+    Recap commande
+   </div>
+    <ul class="list-group list-group-flush">
+     <li class="list-group-item">Montant de l'ordonnance .... <%= @prescription.orders.last.prescription_price %>€</li>
+     <li class="list-group-item">Prise en charge .... <%= @prescription.orders.last.amount_refunded %>€</li>
+     <li class="list-group-item">Livraison .... <%= @prescription.orders.last.delivery_price %>€</li>
+     <li class="list-group-item">Total à régler .... <strong><%= @prescription.orders.last.total_price %>€</strong> </li>
+    </ul>
+    <button type="button" class="btn btn-primary">Paiement</button>
+    <button type="button" class="btn btn-secondary">Annulation</button>
+   </div>
+
+  <% end %>
+
+  <% if @prescription.orders.last.order_status == "paiement validate" %>
+   <div class="order-body">
+    <h1>La pharmacie prépare votre commande pour la livraison</h1>
+   </div>
+
   <% end %>
 
 </div>
