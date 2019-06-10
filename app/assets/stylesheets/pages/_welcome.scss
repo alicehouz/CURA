@@ -1,4 +1,4 @@
-.welcome-header{
+.welcome-header {
   height: 27vh;
 }
 
@@ -25,9 +25,9 @@
 }
 
 #font-address-home{
-  font-size: 13px;
-  color: grey;
-  margin-bottom: 0;
+font-size: 13px;
+color: grey;
+margin-bottom: 0;
 }
 
 .circle-bottom-right {
@@ -102,6 +102,18 @@
   border-radius: 12px;
   box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
   margin-bottom: 15px;
+  width: 74%;
+  height: 16vh;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.scan-photo, .schedule-photo, .search-photo{
+  width: 14%;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
+  margin-bottom: 15px;
   width: 47%;
   height: 16vh;
   text-align: center;
@@ -118,6 +130,49 @@
   width: 15%;
   margin: 7px 7px 0px ;
 }
+
+.cloud-upload {
+   width: 14%;
+   position: absolute;
+   top: 95px;
+   left: 171px;
+}
+
+#upload-text{
+  position: absolute;
+  top: 134px;
+  left: 170px;
+}
+
+#cameradiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  }
+
+#clouddiv {
+  outline: none;
+  border: none;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.modal-dialog {
+  margin-top: 426px;
+}
+
+.modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 11px;
+  outline: 0 
+ }
 
 .cloud-photo {
   width: 32%;
@@ -230,16 +285,45 @@ mark {
 }
 
 .file {
+    width: 53%;
+    height: 20vh;
+    position: absolute;
+    left: 72px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+
+.file {
   color: transparent;
 }
 
 .homeicon, .ordersicon, .logicon {
   width: 100%;
   margin: 10px 0px 10px;
+  margin: 0px 0px 10px;
+  }
 
+
+.homeicon, .ordersicon, .logicon{
+  width: 100%;
+  margin: 0px;
 }
 
 .presicon {
+  width: 85%;
+  margin: 0px;
+  height: 46%;
+}
+
+.list {
+  margin: 0px;
+  width: 20px;
+}
+.grow:active {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
   width: 105%;
   margin: 10px 0px 10px;
   height: 46%;
