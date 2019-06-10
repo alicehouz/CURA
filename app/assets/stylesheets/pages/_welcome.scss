@@ -47,25 +47,30 @@ margin-bottom: 0;
 }
 
 .welcome-footer-home{
-  height: 7vh;
-  position: absolute;
-  margin: auto;
-  bottom: 0px;
-  z-index: -50;
-  width: 100%;
-  border-radius: 21px 21px 0px 0px;
-  background-color: white;
+height: 7vh;
+margin: auto;
+bottom: 0px;
+z-index: -50;
+width: 100%;
+border-radius: 21px 21px 0px 0px;
+box-shadow: 3px 9px 35px 22px rgba(86, 86, 86, 0.1);
+background-color: #3A49CC;
+z-index: 2;
+align-items: center;
+justify-content: space-around;
+position: sticky;
 }
+.welcome-body{
+height: 66vh;
+width: 100%;
+display: flex;
+top: 217px;
+right: 16px;
+flex-direction: column;
+align-items: center;
 
-.welcome-body {
-  height: 55vh;
-  width: 94%;
-  display: flex;
-  position: absolute;
-  top: 200px;
-  right: 11px;
-  flex-direction: column;
-  align-items: center;
+
+
 }
 
 .scan {
@@ -308,12 +313,16 @@ mark {
   width: 20px;
 }
 
-.grow:active {
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-  width: 105%;
-  margin: 10px 0px 10px;
-  height: 46%;
+
+
+.grow {
+  max-width: 25px;
+
+&:active {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+
 }
 

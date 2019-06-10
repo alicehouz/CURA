@@ -1,4 +1,5 @@
-.prescriptions-container {
+
+.order-container {
   background-color: #3A49CC;
   // border-radius: 0px 0px 24px 24px;
   position: sticky;
@@ -6,14 +7,14 @@
   margin-bottom: 2%;
 }
 
-.prescriptions-header {
+.order-header {
   height: 11vh;
   color: white;
   align-items: center;
   padding: 0 20px;
 }
 
-.text-show-prescriptions {
+.text-show-order {
   top: 30%;
   left: 8%;
   font-size: 20%;
@@ -45,7 +46,7 @@
   color: white;
 }
 
-.prescription {
+.order {
   height: 530px;
   background-color: white;
   background-size: cover;
@@ -69,40 +70,40 @@
   padding: 5%;
 }
 
-.show-prescription-name {
+.show-order-name {
   font-size: 130%;
   font-weight: bold;
   margin-bottom: 5%;
 }
 
-.show-prescription-date {
+.show-order-date {
   font-size: 100%;
   color:#898A8F;
   margin: 4% 0%;
 }
 
-.make-an-order-and-delete {
-  margin-top: 8%;
+// .make-an-order-and-delete {
+//   margin-top: 8%;
 
-}
+// }
 
-.btn-outline-style-make-an-order {
-  border: dashed 0.5px #000000;
-  border-radius: 16%;
-  border-color: #898A8F;
-  font-size: 70%;
-  margin: 0% 2% 0% 0%;
-  padding: 2% 5%;
-}
+// .btn-outline-style-make-an-order {
+//   border: dashed 0.5px #000000;
+//   border-radius: 16%;
+//   border-color: #898A8F;
+//   font-size: 70%;
+//   margin: 0% 2% 0% 0%;
+//   padding: 2% 5%;
+// }
 
-.btn-outline-style-delete {
-  border: dashed 0.5px #000000;
-  border-radius: 16%;
-  border-color: #898A8F;
-  font-size: 70%;
-  margin: 0% 0% 0% 2%;
-  padding: 2% 12%;
-}
+// .btn-outline-style-delete {
+//   border: dashed 0.5px #000000;
+//   border-radius: 16%;
+//   border-color: #898A8F;
+//   font-size: 70%;
+//   margin: 0% 0% 0% 2%;
+//   padding: 2% 12%;
+// }
 
 
 

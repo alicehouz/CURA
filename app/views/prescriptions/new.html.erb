@@ -1,11 +1,22 @@
-<h1>Prescriptions#new</h1>
-<p>Find me in app/views/prescriptions/new.html.erb</p>
-
+<div class="prescriptions-container">
+  <div class="prescriptions-header">
+    <div class="text-my-prescriptions">
+      <%= link_to welcome_path do%>
+      <i class="fas fa-chevron-left chevron-style"></i>
+      <%end%>
+      <h2 class="h2-style">Ma nouvelle prescription</h2>
+    </div>
+  </div>
+</div>
+<div class="prescription">
 <%= simple_form_for @prescription do |f| %>
-<%= f.input :image, input_html: { accept: "image/*", capture: "camera" } %>
+<div class="show-prescription-name"><%= f.input :image, input_html: { accept: "image/*", capture: "camera" } %></div>
 <%= f.input :image_cache, as: :hidden %>
-<%= f.input :prescription_name %>
-<%= f.input :prescription_start_date %>
-<%= f.input :prescription_expiry_date %>
-<%= f.button :submit %>
+<div class="show-prescription-name"><%= f.input :prescription_name %></div>
+<div class="show-prescription-date"><%= f.input :prescription_start_date %></div>
+<div class="show-prescription-date"><%= f.input :prescription_expiry_date %></div>
+<button type="button" class="btn btn-outline-light btn-outline-style-make-an-order-new" ><%= f.button :submit %></button>
 <% end %>
+</div>
+<%= render 'shared/footer' %>
+
