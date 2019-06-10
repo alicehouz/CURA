@@ -40,7 +40,7 @@
 // ************slider CSS**********************
 
 
-$size: 32;
+
 
 @mixin track($color: white, $radius: 0) {
     &::-webkit-slider-runnable-track {
@@ -131,12 +131,6 @@ $size: 32;
 
     }
 }
-
-html {
-    font-size: $size + px;
-    text-align: center;
-}
-
 
 
 .center-xy {
