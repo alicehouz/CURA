@@ -16,8 +16,8 @@
     <div class="prescription-date">Début de la prescrition : <%= prescription.prescription_start_date %></div>
     <div class="prescription-date">Fin de la prescription : <%= prescription.prescription_expiry_date %></div>
     <div class="show-delete">
-      <button type="button" class="btn btn-outline-light btn-outline-style-show" ><%= link_to "Afficher", prescription_path(prescription) %></button>
-      <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Suprimer", prescription_path(prescription.id), method: :delete %>
+      <button type="button" class="btn btn-outline-light btn-outline-style-show-index" ><%= link_to "Afficher", prescription_path(prescription) %></button>
+      <button type="button" class="btn btn-outline-light btn-outline-style-delete-index" ><%= link_to "Suprimer", prescription_path(prescription.id), method: :delete %>
       </button>
     </div>
   </div>
