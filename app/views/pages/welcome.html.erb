@@ -1,18 +1,17 @@
-
-
-
- <div class= "welcome-container">
+<div class= "welcome-container">
   <div class="welcome-header">
 
     <div class ="text-welcome-user">
       <% if user_signed_in? %>
-      <h2 id="font-welcome" >Welcome to Cura...</h2>
+      <h2 id="font-welcome">Bienvenue sur Cura...</h2>
       <h2 id="name-user-welcome" > <mark><%=current_user.first_name%></mark></h2>
-        <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Your delivery address: <%= current_user.street_name%>, <%current_user.zip_code %><%current_user.city %></p>
+        <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Votre addresse de livraison: <%= current_user.street_name%>, <%current_user.zip_code %><%current_user.city %></p>
       <%else%>
-      <h2 id="font-welcome-user" >Welcome to Cura</h2>
+      <h2 id="font-welcome-user">Bienvenue sur Cura</h2>
       <h2 id="name-user-welcome"><strong>Our dear patient</strong></h2>
-
+      <%= link_to welcome_path do %>
+      <%= @user.current_user.avatar %>
+      <%end%>
       <%end%>
     </div>
   </div>
@@ -20,22 +19,22 @@
     <div class="scan ">
       <a  class="button-welcome" id="scan-icon" data-toggle="modal" data-target="#exampleModal"><%= image_tag ("scan.png"), class: "scan-photo grow" %></a>
       <div class ="text-welcome" >
-        <p class ="scan-text">Scan </p>
-        <p class="scan-para"> your prescription </p>
+        <p class ="scan-text">Scannez</p>
+        <p class="scan-para">votre ordonnance</p>
       </div>
     </div>
     <div class="schedule ">
       <a class="button-welcome" ><%= image_tag ("calendar.png"), class: "schedule-photo grow" %></a>
       <div class ="text-welcome" >
-        <p class ="scan-text">Schedule</p>
-        <p class="scan-para"> your prescription </p>
+        <p class ="scan-text">Plannifiez</p>
+        <p class="scan-para">votre ordonnance</p>
       </div>
     </div>
     <div class="search ">
       <a class="button-welcome" ><%= image_tag ("search.png"), class: "search-photo grow" %></a>
       <div class ="text-welcome" >
-        <p class ="scan-text">Search</p>
-        <p class="scan-para"> other product </p>
+        <p class ="scan-text">Recherchez</p>
+        <p class="scan-para">un autre produit</p>
       </div>
     </div>
   </div>
@@ -44,7 +43,7 @@
   <div class="welcome-footer-home">
     <ul class="footer-menu d-flex  justify-content-around"">
        <%= link_to welcome_path do%>
-      <li class="list"><%= image_tag ("home_icon.png"), class: "homeicon grow" %></li>
+      <li class="list"><%= image_tag ("home.png"), class: "homeicon grow" %></li>
       <% end %>
       <%= link_to orders_path do%>
       <li class="list"><%= image_tag ("orders-white.png"), class: "ordersicon grow" %></li>
@@ -86,6 +85,9 @@
 
          <button type="submit" class="modal-title" id="clouddiv">
 
+
+            <%= image_tag ("cloud-upload.png"), class: "cloud-photo" %>
+            <p id = "upload-text">Télécharger</p>
             </button>
             <% end %>
 
