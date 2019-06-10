@@ -1,5 +1,45 @@
-
 <div class="order-contaier">
+  <div class ="body-orders-steps">
+    <% if @prescription.orders.last.order_status == "pending" %>
+    <div class="order-header">
+      <div class="placeorder d-flex justify-content-start">
+        <%= link_to welcome_path do%>
+        <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+        <%end%>
+        <h2 class="text-header-order">Order status</h2>
+      </div>
+      <div class="order-steps">
+        <%= image_tag ("3.png"), class: "steps-order" %>
+      </div>
+    </div>
+    <p>Votre commande est en cours de validation </p>
+    <div class="order-status d-flex justify-content-around">
+      <div class="checkmarks d-flex flex-column">
+        <div class="spinnerone">
+          <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
+        </div>
+        <div class="spinnertwo">
+          <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
+        </div>
+        <div class="spinnerthree">
+          <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
+        </div>
+      </div>
+      <div class="textorder">
+        <div class="statusone">
+          <p class="statusonetext">Pharmacie a accepté votre commande</p>
+        </div>
+        <div class="statustwo">
+          <p class="statustwotext" >Pharmacie a accepté votre commande</p>
+        </div>
+        <div class="statusthree">
+          <p class="statusthreetext">Pharmacie a accepté votre commande</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% if @prescription.orders.last.order_status == "pharmacie accept"  %>
   <div class="order-header">
     <div class="placeorder d-flex justify-content-start">
       <%= link_to welcome_path do%>
@@ -11,25 +51,78 @@
       <%= image_tag ("3.png"), class: "steps-order" %>
     </div>
   </div>
-
-<div>
-  <% if @prescription.orders.last.order_status == "pending" %>
-    <div class="order-body">
-     <p>Your order is submitted , please check the status</p>
-     <%= @prescription.orders.last.order_status %>
-    <div class="card" style="width: 18rem;">
-     <ul class="list-group list-group-flush">
-      <li class="list-group-item">La pharmacie a accepter votre commande<div class="spinner-border text-primary" role="status">
-       <span class="sr-only">Loading...</span>
-       </div></li>
-      <li class="list-group-item">Validation & paiement<i class="far fa-circle"></i></li>
-      <li class="list-group-item">La pharmacie prépare votre commande<i class="far fa-circle"></i></li>
-      <li class="list-group-item">Votre commande est en cours de livraison<i class="far fa-circle"></i></li>
-     </ul>
+  <p>Votre commande est en cours de validation </p>
+  <div class="order-status d-flex justify-content-around">
+    <div class="checkmarks d-flex flex-column">
+      <div class="spinnerone">
+        <%= image_tag ("check.png"),class: "checkone" %>
+      </div>
+      <div class="spinnertwo">
+        <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
+      </div>
+      <div class="spinnerthree">
+        <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
+      </div>
+    </div>
+    <div class="textorder">
+      <div class="statusone">
+        <p class="statusonetext">Pharmacie a accepté votre commande</p>
+        <p class ="statusonedate">on  <%=Time.now %> </p>
+      </div>
+      <div class="statustwo">
+        <p class="statustwotext" >Pharmacie a accepté votre commande</p>
+      </div>
+      <div class="statusthree">
+        <p class="statusthreetext">Pharmacie a accepté votre commande</p>
+      </div>
     </div>
   </div>
+</div>
+<% end %>
+<% if @prescription.orders.last.order_status == "facture" %>
+<div class="order-header">
+  <div class="placeorder d-flex justify-content-start">
+    <%= link_to welcome_path do%>
+    <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+    <%end%>
+    <h2 class="text-header-order">Order status</h2>
+  </div>
+  <div class="order-steps">
+    <%= image_tag ("3.png"), class: "steps-order" %>
+  </div>
+</div>
+<p>Votre commande est en cours de validation </p>
+<div class="order-status d-flex justify-content-around">
+  <div class="checkmarks d-flex flex-column">
+    <div class="spinnerone">
+      <%= image_tag ("check.png"), class: "checkone" %>
+    </div>
+    <div class="spinnertwo">
+      <%= image_tag ("check.png"), class: "checktwo" %>
+    </div>
+    <div class="spinnerthree">
+      <%= image_tag ("check.png"), class: "checkthree" %>
+    </div>
+  </div>
+  <div class="textorder">
+    <div class="statusone">
+      <p class="statusonetext">Pharmacie a accepté votre commande</p>
+      <p class ="statusonedate">on  <%=Time.now %> </p>
+    </div>
+    <div class="statustwo">
+      <p class="statustwotext" >Pharmacie valide ton ordonnace</p>
+      <p class ="statusonedate">on  <%=Time.now %> </p>
+    </div>
+    <div class="statusthree">
+      <p class="statusthreetext"> La Pharmacie prepare ta facture</p>
+      <p class ="statusonedate">on  <%=Time.now %> </p>
+    </div>
+  </div>
+</div>
+</div>
+<% end %>
 
-  <% end %>
+
 
   <% if @prescription.orders.last.order_status == "pharmacie accept"  %>
    <div class="order-body">
@@ -75,8 +168,43 @@
 
   <% end %>
 
+<% if @prescription.orders.last.order_status == "recap" %>
+<div>
+<div class="cardmap" >
+  dkjnfjrnfjr
+  <div
+    id="map"
+    style="width: 100%;
+    height: 120px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
 </div>
 
 
+<div class= "orderpayment">
+  <div class="cardsorder p-3 ">
+    <div class="d-flex justify-content-between mb-3">
+      <p><strong>Prescription Price</strong> </p>
+      <p>£4.95</p>
+    </div>
+    <div class="d-flex justify-content-between mb-3">
+      <p><strong>Refunded amount</strong></p>
+      <p>£3.95</p>
+    </div>
+    <div class="d-flex justify-content-between mb-3 border-bottom">
+      <p><strong>Delivery fees</strong> stop paying this</p>
+      <p>£1.5</p>
+    </div>
+    <div class="d-flex justify-content-between mb-3 ">
+      <p><strong>Total</strong></p>
+      <p><strong>£2.5</strong></p>
+    </div>
   </div>
+  <div class="buttonsorder">
+ <button type="button" class="btn btn-primary">Paiement</button>
+  <button type="button" class="btn btn-secondary">Annulation</button>
 </div>
+</div>
+
+<% end %>

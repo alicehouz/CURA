@@ -314,15 +314,11 @@ mark {
 }
 
 
-
-.grow {
-  max-width: 25px;
-
-&:active {
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5);
-  }
-
+.grow:active {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
 }
+
+
 
