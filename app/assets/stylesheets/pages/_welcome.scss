@@ -102,20 +102,8 @@ margin-bottom: 0;
   border-radius: 12px;
   box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
   margin-bottom: 15px;
-  width: 74%;
-  height: 16vh;
-  text-align: center;
-  border-radius: 12px;
-}
-
-.scan-photo, .schedule-photo, .search-photo{
-  width: 14%;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
-  margin-bottom: 15px;
   width: 47%;
-  height: 16vh;
+
   text-align: center;
   border-radius: 12px;
 }
@@ -171,7 +159,7 @@ margin-bottom: 0;
   background-color: #fff;
   background-clip: padding-box;
   border-radius: 11px;
-  outline: 0 
+  outline: 0
  }
 
 .cloud-photo {
@@ -179,7 +167,7 @@ margin-bottom: 0;
   margin: 7px 7px 0px ;
 }
 
-#cameradiv{
+#cameradiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,34 +273,23 @@ mark {
 }
 
 .file {
-    width: 53%;
-    height: 20vh;
-    position: absolute;
-    left: 72px;
-    opacity: 0;
-    overflow: hidden;
-}
-
-
-.file {
+  width: 53%;
+  height: 20vh;
+  position: absolute;
+  left: 72px;
+  opacity: 0;
+  overflow: hidden;
   color: transparent;
 }
 
 .homeicon, .ordersicon, .logicon {
   width: 100%;
   margin: 10px 0px 10px;
-  margin: 0px 0px 10px;
-  }
-
-
-.homeicon, .ordersicon, .logicon{
-  width: 100%;
-  margin: 0px;
 }
 
 .presicon {
   width: 85%;
-  margin: 0px;
+  margin: 10px 0px 10px;
   height: 46%;
 }
 
@@ -320,6 +297,7 @@ mark {
   margin: 0px;
   width: 20px;
 }
+
 .grow:active {
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
@@ -329,13 +307,3 @@ mark {
   height: 46%;
 }
 
-.list {
-  margin: 0px;
-  width: 20px;
-}
-
-.grow:active {
-  -webkit-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5);
-}
