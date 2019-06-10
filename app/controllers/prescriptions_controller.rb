@@ -27,6 +27,7 @@ class PrescriptionsController < ApplicationController
 
   def show_after_order
     @prescription = Prescription.find(params[:prescription_id])
+    session[:counter].present? ? simul_validation_pharm : counter
   end
 
   def destroy
@@ -36,6 +37,29 @@ class PrescriptionsController < ApplicationController
   end
 
   private
+
+  def counter
+    session[:counter] = 1
+  end
+
+  def simul_validation_pharm
+    @order = Order.last
+    @order.order_status = "pharmacie accept"
+    @order.save
+    set_marcker
+  end
+
+  def set_marcker
+    @pharmacie = Pharmacie.find(1)
+      @markers = []
+      @marker =
+        {
+          lat: @pharmacie.latitude,
+          lng: @pharmacie.longitude
+        }
+         @markers << @marker
+         session[:counter] = nil
+  end
 
   def prescription_params
     params.require(:prescription).permit(:image, :image_cache, :prescription_name, :prescription_start_date, :prescription_expiry_date)
