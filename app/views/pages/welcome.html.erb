@@ -72,16 +72,20 @@
             </div>
           </div>
           <div class="pop-up-body">
+            <div class="attachfile">
+               <%= image_tag ("cloud-upload.png"), class: "cloud-upload" %>
+               <p id = "upload-text">Upload</p>
+
+            </div>
 
 
             <%= simple_form_for @prescription do |f| %>
 
-            <%= f.input :image, input_html: { accept: "image/*", capture: "camera" , }, label: false, class: "file"%>
+            <%= f.input :image, input_html: { accept: "image/*", capture: "camera" ,class: "file" }, label: false %>
             <%= f.input :image_cache, as: :hidden, class: "fileattached" %>
 
          <button type="submit" class="modal-title" id="clouddiv">
-            <%= image_tag ("cloud-upload.png"), class: "cloud-photo" %>
-            <p id = "upload-text">Upload</p>
+
             </button>
             <% end %>
 
@@ -92,3 +96,19 @@
         </div>
       </div>
     </div>
+
+
+<script>
+
+  const input = document.querySelector(".file");// Selection l'input
+  const submit = document.querySelector("#clouddiv");// Selection button submit
+
+  const clickUpload = () => {
+    submit.click();
+  }
+
+  input.addEventListener('change', clickUpload);
+
+
+
+</script>
