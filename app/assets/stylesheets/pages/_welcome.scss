@@ -156,21 +156,20 @@ margin-bottom: 0;
   overflow: hidden;
 }
 
-.modal-dialog {
-  margin-top: 426px;
+.modal-dialog{
+margin-top: 426px;
 }
-
-.modal-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-radius: 11px;
-  outline: 0
- }
+.modal-container{
+position: relative;
+display: flex;
+flex-direction: column;
+width: 100%;
+pointer-events: auto;
+background-color: #fff;
+background-clip: padding-box;
+border-radius: 11px;
+outline: 0
+}
 
 .cloud-photo {
   width: 32%;
@@ -281,6 +280,7 @@ mark {
   background-color:  #3A49CC;
   color :white;
 }
+
 
 #file {
   width: 53%;
