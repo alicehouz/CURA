@@ -1,6 +1,7 @@
 .welcome-header {
-height: 27vh;
+  height: 27vh;
 }
+
 .text-welcome-user {
   position: sticky;
 }
@@ -28,8 +29,6 @@ font-size: 13px;
 color: grey;
 margin-bottom: 0;
 }
-
-
 
 .circle-bottom-right {
   width: 30%;
@@ -72,7 +71,7 @@ margin-bottom: 0;
   color: #565656;
   font-weight: bold;
   font-size: 16px;
-  margin: 0px;
+  margin: 29px 0px 0px;
 }
 
 .scan-para {
@@ -93,23 +92,22 @@ margin-bottom: 0;
   text-align: center;
   border-radius: 12px;
   box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
-  /* margin-left: 8px; */
   margin-bottom: 15px;
   text-align: center;
   border-radius: 12px;
 }
 
 .search {
-
-text-align: center;
-border-radius: 12px;
-box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
-margin-bottom: 15px;
-width: 74%;
-height: 16vh;
-text-align: center;
-border-radius: 12px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
+  margin-bottom: 15px;
+  width: 74%;
+  height: 16vh;
+  text-align: center;
+  border-radius: 12px;
 }
+
 .scan-photo, .schedule-photo, .search-photo{
   width: 14%;
   text-align: center;
@@ -120,12 +118,12 @@ border-radius: 12px;
   height: 16vh;
   text-align: center;
   border-radius: 12px;
-
 }
 
 .scan-photo, .schedule-photo, .search-photo {
   width: 18%;
   margin-bottom: -11px;
+  margin-bottom: -27px;
 }
 
 .camera-photo {
@@ -134,49 +132,46 @@ border-radius: 12px;
 }
 
 .cloud-upload {
-    width: 14%;
-    position: absolute;
-    top: 95px;
-    left: 171px;
-
+   width: 14%;
+   position: absolute;
+   top: 95px;
+   left: 171px;
 }
-
-
 
 #upload-text{
-
-
-position: absolute;
-    top: 134px;
-    left: 170px;
+  position: absolute;
+  top: 134px;
+  left: 170px;
 }
-
 
 #cameradiv{
-display: flex;
-flex-direction: column;
-align-items: center;
-margin: 0px;
-}
-#clouddiv{
-outline: none;
-border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  }
+
+#clouddiv {
+  outline: none;
+  border: none;
   opacity: 0;
   overflow: hidden;
 }
-.modal-dialog{
-margin-top: 426px;
+
+.modal-dialog {
+  margin-top: 426px;
 }
-.modal-container{
-position: relative;
-display: flex;
-flex-direction: column;
-width: 100%;
-pointer-events: auto;
-background-color: #fff;
-background-clip: padding-box;
-border-radius: 11px;
-outline: 0 
+
+.modal-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 11px;
+  outline: 0 
  }
 
 .cloud-photo {
@@ -196,7 +191,6 @@ outline: 0
   flex-direction: column;
   align-items: center;
   margin: 2px 102px 2px;
-
 }
 
 .modal-dialog {
@@ -223,23 +217,6 @@ outline: 0
 }
 
 .pop-up-header {
-
-display: flex;
-align-items: flex-start;
-justify-content: space-between;
-padding: 4px;
-border-bottom: 1px solid #dee2e6;
-border-top-left-radius: 2px;
-border-top-right-radius: 2px;
-}
-.pop-up-body{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 4px;
-    margin: 0px;
-    height: 70px;
-
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -247,7 +224,6 @@ border-top-right-radius: 2px;
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-
 }
 
 .pop-up-body {
@@ -275,6 +251,7 @@ border-top-right-radius: 2px;
   color: #5B5A5A;
   font-size: 16px;
 }
+
 .question {
   font-size: 14px;
 }
@@ -291,7 +268,6 @@ border-top-right-radius: 2px;
 }
 
 .footer-menu {
-
   list-style: none;
   float: left;
   width: 100%;
@@ -301,7 +277,6 @@ border-top-right-radius: 2px;
   background-color: #3A49CC;
   border-radius: 26px 26px 0px 0px;
   padding: 0;
-
 }
 
 mark {
@@ -310,7 +285,7 @@ mark {
 }
 
 .file {
-      width: 53%;
+    width: 53%;
     height: 20vh;
     position: absolute;
     left: 72px;
@@ -325,30 +300,32 @@ mark {
 
 .homeicon, .ordersicon, .logicon {
   width: 100%;
+  margin: 10px 0px 10px;
   margin: 0px 0px 10px;
   }
 
-.homeicon, .ordersicon, .logicon{
-width: 100%;
-margin: 0px;
-}
-.presicon {
 
-width: 85%;
-margin: 0px;
-height: 46%;
+.homeicon, .ordersicon, .logicon{
+  width: 100%;
+  margin: 0px;
 }
+
+.presicon {
+  width: 85%;
+  margin: 0px;
+  height: 46%;
+}
+
 .list {
-margin: 0px;
-width: 20px;
+  margin: 0px;
+  width: 20px;
 }
 .grow:active {
--webkit-transform: scale(1.5);
--ms-transform: scale(1.5);
-transform: scale(1.5);
-
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
   width: 105%;
-  margin: 0px 0px 10px;
+  margin: 10px 0px 10px;
   height: 46%;
 }
 
@@ -361,5 +338,4 @@ transform: scale(1.5);
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
   transform: scale(1.5);
-
 }
