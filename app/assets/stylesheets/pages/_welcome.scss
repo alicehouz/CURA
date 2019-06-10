@@ -4,6 +4,7 @@
 
 .text-welcome-user {
   position: sticky;
+
 }
 
 .text-welcome-user {
@@ -28,6 +29,15 @@
 font-size: 13px;
 color: grey;
 margin-bottom: 0;
+}
+
+
+.profile-logo{
+  width: 28px;
+  border-radius: 50px;
+  margin-left: 90px;
+  margin-top: -1px;
+  /*border: 1px solid #3b49cc;*/
 }
 
 .circle-bottom-right {
@@ -272,7 +282,7 @@ mark {
   color :white;
 }
 
-.file {
+#file {
   width: 53%;
   height: 20vh;
   position: absolute;
