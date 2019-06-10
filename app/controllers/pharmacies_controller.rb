@@ -11,5 +11,6 @@ class PharmaciesController < ApplicationController
   end
 
   def show
+
   end
 end

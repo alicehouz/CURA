@@ -44,6 +44,14 @@
       <li class="list-group-item">Votre commande est en cours de livraison<i class="far fa-circle"></i></li>
      </ul>
     </div>
+    <div
+     id="map"
+     style="width: 100%;
+     height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
+
    <div class="card" style="width: 18rem;">
    <div class="card-header">
     Recap commande
@@ -64,13 +72,6 @@
    <div class="order-body">
     <h1>La pharmacie prépare votre commande pour la livraison</h1>
    </div>
-   <div
-   id="map"
-   style="width: 100%;
-   height: 600px;"
-   data-markers="<%= @markers.to_json %>"
-   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-   ></div>
 
   <% end %>
 
