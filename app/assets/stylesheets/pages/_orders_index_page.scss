@@ -1,19 +1,17 @@
-.prescriptions-container {
+.orders-container {
   background-color: #3A49CC;
   // border-radius: 0px 0px 24px 24px;
   position: sticky;
   top: 0;
   margin-bottom: 2%;
+  z-index: 2;
 }
 
-.prescriptions-header {
+.orders-header {
   height: 11vh;
-  color: white;
-  align-items: center;
-  padding: 0 20px;
 }
 
-.text-show-prescriptions {
+.text-my-orders {
   top: 30%;
   left: 8%;
   font-size: 20%;
@@ -21,6 +19,7 @@
   position: absolute;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .chevron-style {
@@ -30,26 +29,29 @@
 
 .h2-style {
   display: inline-block;
-  padding-left: 35px;
+  padding-left: 20px;
   font-size: 24px;
 }
 
-.position-style {
-  // padding-left: 51%;
-  // padding-bottom: 51%;
-  width: 100%;
-  text-align: right;
+// .circle-style {
+//   size: 4%;
+//   padding: 2% 2% 0% 0%;
+// }
 
-}
-.fa-list-ul-style{
-  color: white;
+.orders-body {
+  // background-color: #F1F1F1;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  z-index: 1;
 }
 
-.prescription {
-  height: 530px;
+.card-category {
   background-color: white;
   background-size: cover;
   background-position: center;
+  height: 25%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -58,56 +60,42 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 8% 8% 3% 8%;
-  padding: 2% 2% 2% 2%;
+  margin: 2% 8% 3% 8%;
+  padding: 2%;
+  z-index: 2;
 }
 
-.img-card {
-  margin-bottom: 8%;
-  height: 57%;
-  border-radius: 2%;
-  padding: 5%;
-}
-
-.show-prescription-name {
-  font-size: 130%;
-  font-weight: bold;
-  margin-bottom: 5%;
-}
-
-.show-prescription-date {
+.order-name {
   font-size: 100%;
+  font-weight: bold;
+}
+
+.order-date {
+  font-size: 75%;
   color:#898A8F;
-  margin: 4% 0%;
 }
 
-.make-an-order-and-delete {
-  margin-top: 8%;
-
-}
-
-.btn-outline-style-make-an-order-show {
+.btn-outline-style-show {
   border: dashed 0.5px #000000;
   border-radius: 16%;
   border-color: #898A8F;
   font-size: 70%;
   margin: 0% 2% 0% 0%;
-  padding: 2% 5%;
+  padding: 2% 12%;
 }
 
-.btn-outline-style-delete-show {
+.btn-outline-style-delete {
   border: dashed 0.5px #000000;
   border-radius: 16%;
   border-color: #898A8F;
   font-size: 70%;
   margin: 0% 0% 0% 2%;
-  padding: 2% 12%;
+  padding: 2% 5%;
 }
 
-
-
-
-
+.show-delete {
+  padding: 2%;
+}
 
 
 
