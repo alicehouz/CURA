@@ -11,8 +11,12 @@
     <%= f.error_notification %>
     <div class="slick-form">
       <div class="form-inputs">
-        <%= f.input :avatar, input_html: { accept: "image/*", capture: "camera", id: "upload-image" }, label: false %>
-        <%= f.input :avatar_cache, as: :hidden %>
+        <div class="avatar-group d-flex align-items-center">
+          <!-- <p>Avatar :</p> -->
+          <%= f.input :avatar, input_html: { accept: "image/*", capture: "camera", id: "upload-image" } %>
+          <%= f.input :avatar_cache, as: :hidden %>
+          <%= image_tag ("cloud-upload.png"), class: "upload-image avatar-uploader" %>
+        </div>
         <div class="full-name">
           <%= f.input :first_name,
           label: false,
@@ -58,15 +62,18 @@
         label: false,
         required: true,
         input_html: { placeholder: "City", autocomplete: "City", class: "login-form-input" } %>
-        <%= f.input :social_security,
-        required: true %>
+      <div class="avatar-group d-flex align-items-center">
+        <%= f.input :social_security, input_html: { accept: "image/*", capture: "camera", id: "upload-imagee" } %>
         <%= f.input :social_security_cache, as: :hidden %>
-        <%= f.input :id_card,
-        required: true %>
+        <%= image_tag ("cloud-upload.png"), class: "upload-image ss-uploader" %>
+      </div>
+      <div class="avatar-group d-flex align-items-center">
+        <%= f.input :id_card, input_html: { accept: "image/*", capture: "camera", id: "upload-imageee" } %>
         <%= f.input :id_card_cache, as: :hidden %>
+        <%= image_tag ("cloud-upload.png"), class: "upload-image id-uploader" %>
+      </div>
         <div class="form-actions">
           <%= f.button :submit, "Sign up", class: "btn-signup btn-blue btn-blue-centered" %>
-          <span class="btn-previous">back</span>
         </div>
       </div>
     </div>
