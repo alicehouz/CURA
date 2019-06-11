@@ -11,6 +11,24 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 initMapbox();
 
+if (document.querySelector(".avatar-uploader")) {
+  document.querySelector(".avatar-uploader").addEventListener("click", function() {
+    document.querySelector("#upload-image").click()
+  });
+}
+
+if (document.querySelector(".ss-uploader")) {
+  document.querySelector(".ss-uploader").addEventListener("click", function() {
+    document.querySelector("#upload-imagee").click()
+  });
+}
+
+if (document.querySelector(".id-uploader")) {
+  document.querySelector(".id-uploader").addEventListener("click", function() {
+    document.querySelector("#upload-imagee").click()
+  });
+}
+
 // ******************unlockslider****************
 
 // ******************unlock****************
