@@ -7,9 +7,6 @@
       <h2 id="font-welcome">Bienvenue sur Cura...</h2>
       <h2 id="name-user-welcome" > <mark><%=current_user.first_name%></mark></h2>
         <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Votre addresse de livraison: <%= current_user.street_name%>, <%current_user.zip_code %><%current_user.city %></p>
-
-     <!--  <div><a  class="button-profile" id="profile-icon" data-toggle="modal" data-target="#exampleModal"><%= image_tag ("user.png"), class: "profile-logo grow" %></a> </div> -->
-      <!-- <div> <%= image_tag(current_user.avatar.url, id: "avatar-currentuser") %></div> -->
       <%else%>
       <h2 id="font-welcome-user">Bienvenue sur Cura</h2>
       <h2 id="name-user-welcome"><strong>Our dear patient</strong></h2>
@@ -81,7 +78,7 @@
 
             <%= simple_form_for @prescription do |pop| %>
 
-            <%= pop.input :image, input_html: { accept: "image/*", capture: "camera" ,id: "file" }, label: false %>
+            <%= pop.input :image, input_html: { accept: "image/*", capture: "camera", id: "file" }, label: false %>
             <%= pop.input :image_cache, as: :hidden, class: "fileattached" %>
 
          <button type="submit" class="modal-title" id="clouddiv">
