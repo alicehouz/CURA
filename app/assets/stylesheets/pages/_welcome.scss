@@ -290,13 +290,14 @@ mark {
 
 
 #file {
-  width: 53%;
-  height: 20vh;
-  position: absolute;
-  left: 72px;
-  opacity: 0;
-  overflow: hidden;
-  color: transparent;
+width: 57%;
+height: 11vh;
+position: absolute;
+left: 130px;
+opacity: 0;
+overflow: hidden;
+z-index: 1;
+color: transparent;
 }
 
 .homeicon, .ordersicon, .logicon {
