@@ -13,15 +13,17 @@
 }
 
 .logo-cura {
-  width: 210px;
+  width: 240px;
+  margin-left: -20px;
 }
 
 .tagline {
   font-family: 'Poppins';
-  font-size: 12px;
+  font-size: 13px;
   color: white;
   padding-top: 10px;
   text-align: center;
+  padding-left: 7px;
 }
 
 .links-emplacement {
@@ -86,9 +88,10 @@
 }
 
 .pullee {
-    width: 8rem;
+    width: 14rem;
     appearance: none;
     background-color: transparent;
+
 
 
     // handle active states
@@ -109,15 +112,16 @@
     // thumb styles
     @include thumb() {
         display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        border-radius: 50%;
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 90%;
         background: #1E48A9;
         transform-origin: 60% 60%;
         transform: scale(1);
         transition: transform ease-out 30ms;
         cursor: -webkit-grab;
         cursor: -moz-grab;
+        margin: 1% 0% 0% 0%
 
     }
 
@@ -140,13 +144,13 @@
     transform: translate(-50%, -50%);
 }
 
-.slidetext{
+.slidetext {
   font-family: "poppins";
   font-size: 14px;
   position: absolute;
-    left: 105px;
-    top: 20px;
-    color: rgba(0, 0, 0, 0.5);
+  left: 31%;
+  top: 25%;
+  color: rgba(0, 0, 0, 0.5);
 
 }
 
