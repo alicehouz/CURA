@@ -11,7 +11,7 @@
     <%= f.error_notification %>
     <div class="slick-form">
       <div class="form-inputs">
-        <%= f.input :avatar %>
+        <%= f.input :avatar, input_html: { accept: "image/*", capture: "camera", id: "upload-image" }, label: false %>
         <%= f.input :avatar_cache, as: :hidden %>
         <div class="full-name">
           <%= f.input :first_name,
