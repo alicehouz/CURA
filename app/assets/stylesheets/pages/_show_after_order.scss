@@ -14,39 +14,49 @@ position: absolute;
 left: 57px;
 }
 .order-status{
-width: 100%;
-height: 60vh;
-margin: 0px;
+height: 35vh;
 position: relative;
-top: 152px;
+top: 378px;
 display: flex;
+right: 11px;
 flex-direction: column;
 }
-
 .statusone, .statustwo, .statusthree{
-
-
 height: 10vh;
 }
-
+#statusonetext{
+font-size: 16px;
+position: absolute;
+left: 76px;
+top: 3px;
+}
+#statustwotext{
+font-size: 16px;
+position: absolute;
+left: 76px;
+top: 76px;
+}
+#statusthreetext {
+font-size: 16px;
+position: absolute;
+left: 76px;
+top: 150px;
+}
 .statusonedate{
 margin: 0px;
 color: grey;
 font-size: 14px;
 }
-
 .statustwodate{
 margin: 0px;
 color: grey;
 font-size: 14px;
 }
-
 .statusthreedate{
 margin: 0px;
 color: grey;
 font-size: 14px;
 }
-
 .cardsorder{
 border: 1px solid rgba(0, 0, 0, 0.125);
 border-radius: 20px;
@@ -65,10 +75,91 @@ border-radius: 20px;
 background-color: white;
 width: 90%;
 height: 36vh;
+
 }
 .buttonsorder{
 position: absolute;
 position: absolute;
 top: 87%;
 left: 21%;
+}
+.checkicon {
+width: 10%;
+}
+.spinnerone, .spinnertwo, .spinnerthree{
+position: absolute;
+left: 34px;
+}
+.pharmacistdelivery{
+width: 64%;
+position: absolute;
+top: 216px;
+left: 64px;
+}
+.textconfirmation {
+position: absolute;
+top: 147px;
+left: 72px;
+font-weight: bold;
+font-size: 18px;
+}
+.timeone{
+color: grey;
+font-size: 15px;
+color: grey;
+position: absolute;
+top: 8%;
+left: 79px;
+display: none;
+}
+.timetwo{
+color: grey;
+font-size: 15px;
+color: grey;
+position: absolute;
+top: 38%;
+left: 79px;
+display: none;
+}
+.timethree{
+color: grey;
+font-size: 15px;
+color: grey;
+position: absolute;
+top: 66%;
+left: 79px;
+display: none;
+}
+.orderstatus{
+font-size: 22px;
+font-weight: bold;
+color: #3A49CC;
+position: absolute;
+top: 22px;
+left: 21px;
+}
+#map {
+
+    position: absolute;
+    left: 36px;
+    top: 96px;
+}
+
+
+.card{
+ background-color: white;
+    height: 35vh;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    position: absolute;
+    left: 19px;
+    top: 93px;
+    width: 90%;
+    border-radius: 21px;
+}
+
+
+.pharmaciedetails{
+
+  position: absolute;
+
 }

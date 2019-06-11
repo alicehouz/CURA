@@ -3,7 +3,7 @@
   <div class="order-header">
     <div class="placeorder d-flex justify-content-start">
       <%= link_to welcome_path do%>
-      <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+      <%= image_tag ("close.png"), class: "arrow-order" %>
       <%end%>
       <h2 class="text-header-order">Placing an order</h2>
     </div>
@@ -37,7 +37,7 @@
 
       <div class="white-footer">
         <%= link_to  new_prescription_order_path(@prescription) do%>
-        <%= image_tag ("right.png") %>
+        <%= image_tag ("next.svg"), class: "nextone" %>
         <% end %>
 
       </div>

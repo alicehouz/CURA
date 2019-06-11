@@ -3,5 +3,5 @@ class Order < ApplicationRecord
   has_many :orders_prescriptions, dependent: :destroy
   has_many :prescriptions, through: :orders_prescriptions
 
-  # belongs_to :pharmacy
+  belongs_to :pharmacie, optional: true
 end
