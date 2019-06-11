@@ -86,9 +86,10 @@
 }
 
 .pullee {
-    width: 8rem;
+    width: 14rem;
     appearance: none;
     background-color: transparent;
+
 
 
     // handle active states
@@ -109,8 +110,8 @@
     // thumb styles
     @include thumb() {
         display: block;
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 2.2rem;
+        height: 2.2rem;
         border-radius: 50%;
         background: #1E48A9;
         transform-origin: 60% 60%;
@@ -118,6 +119,7 @@
         transition: transform ease-out 30ms;
         cursor: -webkit-grab;
         cursor: -moz-grab;
+        margin: 1% 0% 0% 0%
 
     }
 
@@ -144,8 +146,8 @@
   font-family: "poppins";
   font-size: 14px;
   position: absolute;
-    left: 105px;
-    top: 20px;
+    left: 31%;
+    top: 25%;
     color: rgba(0, 0, 0, 0.5);
 
 }

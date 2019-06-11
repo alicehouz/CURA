@@ -7,10 +7,11 @@
       <h2 class="h2-style">Mes commandes</h2>
     </div>
   </div>
+</div>
   <div class="orders-body">
     <% @orders.each do |order| %>
     <div class="card-category">
-      <% if order.order_status == "En attente" %>
+      <% if order.order_status == "pending" %>
       <!-- <div class="card" style="width: 18rem;">
         <div class="card-body"> -->
           <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %></h5>
@@ -26,7 +27,7 @@
         <!-- </div>
       </div> -->
       <% end %>
-      <% if order.order_status == "Livrée" %>
+      <% if order.order_status == "delivery" %>
       <!-- <div class="card" style="width: 18rem;">
         <div class="card-body"> -->
           <h5 class="card-title"></h5>
@@ -47,5 +48,7 @@
     </div>
     <% end %>
   </div>
-</div>
 <%= render 'shared/footer' %>
+
+
+
