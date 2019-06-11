@@ -1,5 +1,4 @@
 .order-contaier {
-background-color: #ededed;
 margin: auto;
 height: 100vh;
 }
@@ -7,18 +6,20 @@ height: 100vh;
 height: 15vh;
 }
 .arrow-order{
-width: 13%;
-margin-top: 22px;
-margin-left: 17px;
-position: relative;
+       width: 49%;
+    position: relative;
+    top: 22px;
+    left: 14px;
+
 }
 .text-header-order {
-font-size: 20px;
-color: #3A49CC;
-font-weight: bold;
-position: absolute;
-left: 52px;
-top: 25px;
+    font-size: 22px;
+    color: #3A49CC;
+    font-weight: bold;
+    position: absolute;
+    left: 62px;
+    top: 23px;
+
 }
 .order-steps{
 height: 40%;
@@ -26,31 +27,34 @@ text-align: center;
 margin-top: 9px;
 }
 .steps-order {
-width: 74%;
-margin-left: 70px;
+
+    width: 83%;
+    position: absolute;
+    top: 9%;
+    left: 19%;
 }
 .order-body{
 height: 85vh;
 position: relative;
 }
 .white-container{
-background-color: white;
-opacity: 0.9;
-height: 80vh;
-width: 86%;
-border-radius: 13px;
-position: absolute;
-top: 6px;
-left: 26px;
+
+    opacity: 0.9;
+    height: 80vh;
+    width: 86%;
+    border-radius: 13px;
+    position: absolute;
+    top: 67px;
+    left: 26px;
 }
 .orderbody-text{
-font-weight: bold;
-color: #3A49CC;
-font-size: 15px;
-position: absolute;
-top: 3;
-top: 17px;
-padding-left: 20px;
+   font-weight: bold;
+    color: #3A49CC;
+    font-size: 18px;
+    position: absolute;
+    top: 3;
+    top: 17px;
+    left: 37px;
 }
 .image-uploaded{
     border: 1px solid #3a49cc;
@@ -96,3 +100,7 @@ margin-top: 2px;
 margin-right: 4px;
 }
 
+.nextone{
+
+  width: 17%;
+}

@@ -4,81 +4,77 @@
     <div class="order-header">
       <div class="placeorder d-flex justify-content-start">
         <%= link_to welcome_path do%>
-        <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+        <%= image_tag ("close.png"), class: "arrow-order" %>
         <%end%>
-        <h2 class="text-header-order">Order status</h2>
+        <h2 class="text-header-order">Placing an order</h2>
       </div>
       <div class="order-steps">
         <%= image_tag ("3.png"), class: "steps-order" %>
       </div>
     </div>
-
-    <p>Votre commande est en cours de validation </p>
+    <p class="textconfirmation ">Merci pour votre commande </p>
+    <%= image_tag ("pharmacist.png") , class: "pharmacistdelivery"%>
     <div class="order-status" >
-
-
-        <div class="statusone d-flex justify-content-around">
+      <div class="statusone d-flex justify-content-around">
         <div class="spinnerone">
           <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
         </div>
-          <p class="statusonetext">Pharmacie a accepté votre commande</p>
-        </div>
-
-
-    <div class="statustwo d-flex justify-content-around">
+        <p id ="statusonetext">Votre commande a été acceptée</p>
+        <p class= "timeone"><%= Time.now %></p>
+      </div>
+      <div class="statustwo d-flex justify-content-around">
         <div class="spinnertwo">
           <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
         </div>
-          <p class="statustwotext">Pharmacie a accepté votre commande</p>
-        </div>
-
-
-        <div class="statusthree d-flex justify-content-around">
+        <p id="statustwotext">La pharmacie prépare ta commande</p>
+        <p  class="timetwo"><%= Time.now %></p>
+      </div>
+      <div class="statusthree d-flex justify-content-around">
         <div class="spinnerthree">
           <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
         </div>
-          <p class="statusthreetext">Pharmacie a accepté votre commande</p>
-        </div>
-
-
-
-
+        <p id="statusthreetext">La pharmacie prépare ta facture</p>
+        <p class="timethree"><%= Time.now %></p>
+      </div>
     </div>
   </div>
   <% end %>
-
-
-
   <% if @prescription.orders.last.order_status == "pharmacie accept"  %>
   <div class="textdiv">
     <div>
-      <div class="cardmap" >
-        dkjnfjrnfjr
-        <div
-          id="map"
-          style="width: 100%;
-          height: 120px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-        ></div>
+      <h2 class ="orderstatus "> Order Status</h2>
+      <div class="card" >
+        <div class="pharmaciedetails">
+          <p class ="namepharmacie"><%= @prescription.orders.last.pharmacie.name %></p>
+          <p class ="addresspharmacie"><%= @prescription.orders.last.pharmacie.address %></p>
+        </div>
+        <div class="mapcss">
+          <div
+            id="map"
+            style="width: 79%;
+            height: 157px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          ></div>
+        </div>
       </div>
       <div class= "orderpayment">
         <div class="cardsorder p-3 ">
           <div class="d-flex justify-content-between mb-3">
             <p><strong>Prescription Price</strong> </p>
-            <p>£4.95</p>
+            <p>€4.95</p>
           </div>
           <div class="d-flex justify-content-between mb-3">
             <p><strong>Refunded amount</strong></p>
-            <p>£3.95</p>
+            <p>€3.95</p>
           </div>
           <div class="d-flex justify-content-between mb-3 border-bottom">
             <p><strong>Delivery fees</strong> stop paying this</p>
-            <p>£1.5</p>
+            <p>€1.5</p>
           </div>
           <div class="d-flex justify-content-between mb-3 ">
             <p><strong>Total</strong></p>
-            <p><strong>£2.5</strong></p>
+            <p><strong>€2.5</strong></p>
           </div>
         </div>
         <div class="buttonsorder">
@@ -125,23 +121,35 @@
 
     <script type="text/javascript">
     const spinner = document.querySelector(".spinnerone");
+    if (spinner) {
     setTimeout(function() {
     spinner.innerHTML = '<%= image_tag ("check.png")%>';
     }
     ,1000);
+    }
     const spinnertwo = document.querySelector(".spinnertwo");
     setTimeout(function() {
     spinnertwo.innerHTML = '<%= image_tag ("check.png")%>';
     }
-    ,2000);
+    ,2400);
     const spinnerthree = document.querySelector(".spinnerthree");
     setTimeout(function() {
     spinnerthree.innerHTML = '<%= image_tag ("check.png")%>';
     }
-    ,3000);
-    // setTimeout(function() {
-    // const links = document.querySelector(".textdiv");
-    //   links.style.display = "block";
-    // }
-    //   ,1000);
+    ,3300);
+     setTimeout(function() {
+     const links = document.querySelector(".timeone");
+    links.style.display = "block";
+    }
+      ,1030);
+     setTimeout(function() {
+     const linkstwo = document.querySelector(".timetwo");
+    linkstwo.style.display = "block";
+    }
+      ,2430);
+     setTimeout(function() {
+     const linksthree = document.querySelector(".timethree");
+    linksthree.style.display = "block";
+    }
+      ,3330);
     </script>

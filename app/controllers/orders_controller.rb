@@ -20,6 +20,7 @@ class OrdersController < ApplicationController
     else
       render :new
     end
+    session[:counter] = nil
   end
 
   def show

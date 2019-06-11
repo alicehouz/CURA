@@ -1,5 +1,5 @@
 .address-contaier {
-background-color: #ededed;
+
 margin: auto;
 height: 100vh;
 }
@@ -7,18 +7,18 @@ height: 100vh;
 height: 15vh;
 }
 .arrow-address {
-width: 13%;
-margin-top: 22px;
-margin-left: 17px;
-position: relative;
+   width: 49%;
+    position: relative;
+    top: 22px;
+    left: 31px;
 }
 .text-header-address {
-font-size: 18px;
-color: #3A49CC;
-font-weight: bold;
-position: absolute;
-left: 46px;
-top: 20px;
+  font-size: 22px;
+    color: #3A49CC;
+    font-weight: bold;
+    position: absolute;
+    left: 62px;
+    top: 23px;
 }
 .address-steps {
 height: 40%;
@@ -26,8 +26,10 @@ text-align: center;
 margin-top: 9px;
 }
 .steps-address {
-width: 80%;
-margin-left: 70px;
+ width: 83%;
+    position: absolute;
+    top: 9%;
+    left: 19%;
 }
 
 
@@ -87,3 +89,9 @@ width: 100%;
 
 
 
+.nexttwo{
+
+width: 25%;
+margin-right: 97px;
+
+  }
