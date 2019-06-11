@@ -4,7 +4,6 @@
 
 .text-welcome-user {
   position: sticky;
-
 }
 
 .text-welcome-user {
@@ -13,31 +12,29 @@
   position: absolute;
 }
 
-#font-welcome{
+#font-welcome {
   font-size: 20px;
   color: #565656;
   margin-bottom: 12px;
 }
 
-#name-user-welcome{
+#name-user-welcome {
   font-size: 24px;
   color: #565656;
   font-weight: bold;
 }
 
-#font-address-home{
-font-size: 13px;
-color: grey;
-margin-bottom: 0;
+#font-address-home {
+  font-size: 13px;
+  color: grey;
+  margin-top: 19px;
 }
-
 
 .profile-logo{
   width: 28px;
   border-radius: 50px;
   margin-left: 90px;
   margin-top: -1px;
-  /*border: 1px solid #3b49cc;*/
 }
 
 .circle-bottom-right {
@@ -47,31 +44,29 @@ margin-bottom: 0;
 }
 
 .welcome-footer-home{
-height: 7vh;
-margin: auto;
-bottom: 0px;
-z-index: -50;
-width: 100%;
-border-radius: 21px 21px 0px 0px;
-box-shadow: 3px 9px 35px 22px rgba(86, 86, 86, 0.1);
-background-color: #3A49CC;
-z-index: 2;
-align-items: center;
-justify-content: space-around;
-position: sticky;
-text-align: center;
+  height: 7vh;
+  margin: auto;
+  bottom: 0px;
+  z-index: -50;
+  width: 100%;
+  border-radius: 21px 21px 0px 0px;
+  box-shadow: 3px 9px 35px 22px rgba(86, 86, 86, 0.1);
+  background-color: #3A49CC;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  text-align: center;
 }
-.welcome-body{
-height: 66vh;
-width: 100%;
-display: flex;
-top: 217px;
-right: 16px;
-flex-direction: column;
-align-items: center;
 
-
-
+.welcome-body {
+  height: 66vh;
+  width: 100%;
+  display: flex;
+  top: 217px;
+  right: 16px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .scan {
@@ -87,7 +82,7 @@ align-items: center;
   color: #565656;
   font-weight: bold;
   font-size: 16px;
-  margin: 29px 0px 0px;
+  margin: 31px 0px 0px;
 }
 
 .scan-para {
@@ -127,7 +122,7 @@ align-items: center;
 .scan-photo, .schedule-photo, .search-photo {
   width: 18%;
   margin-bottom: -11px;
-  margin-bottom: -27px;
+  margin-bottom: -32px;
 }
 
 .camera-photo {
@@ -142,13 +137,13 @@ align-items: center;
    left: 171px;
 }
 
-#upload-text{
+#upload-text {
   position: absolute;
   top: 134px;
   left: 170px;
 }
 
-#cameradiv{
+#cameradiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,9 +157,10 @@ align-items: center;
   overflow: hidden;
 }
 
-.modal-dialog{
+.modal-dialog {
 margin-top: 426px;
 }
+
 .modal-container{
 position: relative;
 display: flex;
@@ -237,7 +233,7 @@ outline: 0
   margin: 0px;
 }
 
-.pop-up-footer{
+.pop-up-footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,7 +243,7 @@ outline: 0
   margin-top: 9px;
 }
 
-.button-pop-up{
+.button-pop-up {
   text-decoration: none;
   background-color: white;
   border: none;
