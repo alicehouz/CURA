@@ -5,7 +5,7 @@
       <%= link_to welcome_path do%>
       <i class="fas fa-chevron-left chevron-style"></i>
       <%end%>
-      <h2 class="h2-style">My Prescriptions</h2>
+      <h2 class="h2-style"> Mes Prescriptions</h2>
     </div>
   </div>
 </div>
@@ -13,13 +13,15 @@
   <% @prescriptions.each do |prescription| %>
   <div class="card-category">
     <div class="prescription-name"><%= prescription.prescription_name %></div>
-    <div class="prescription-date">prescription start date : <%= prescription.prescription_start_date %></div>
-    <div class="prescription-date">prescription expiry date : <%= prescription.prescription_expiry_date %></div>
+    <div class="prescription-date">Début de la prescrition : <%= prescription.prescription_start_date %></div>
+    <div class="prescription-date">Fin de la prescription : <%= prescription.prescription_expiry_date %></div>
     <div class="show-delete">
-      <button type="button" class="btn btn-outline-light btn-outline-style-show" ><%= link_to "Show", prescription_path(prescription) %></button>
-      <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Delete", prescription_path(prescription.id), method: :delete %>
+      <button type="button" class="btn btn-outline-light btn-outline-style-show-index" ><%= link_to "Afficher", prescription_path(prescription) %></button>
+      <button type="button" class="btn btn-outline-light btn-outline-style-delete-index" ><%= link_to "Suprimer", prescription_path(prescription.id), method: :delete %>
       </button>
     </div>
   </div>
   <% end %>
+
 </div>
+<%= render 'shared/footer' %>

@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2019_06_09_135409) do
   create_table "orders", force: :cascade do |t|
     t.string "order_number"
     t.bigint "user_id"
-    t.bigint "prescription_id"
     t.integer "total_price"
     t.date "order_date"
     t.string "street_name"
@@ -32,7 +31,6 @@ ActiveRecord::Schema.define(version: 2019_06_09_135409) do
     t.datetime "updated_at", null: false
     t.bigint "pharmacie_id"
     t.index ["pharmacie_id"], name: "index_orders_on_pharmacie_id"
-    t.index ["prescription_id"], name: "index_orders_on_prescription_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
@@ -91,7 +89,6 @@ ActiveRecord::Schema.define(version: 2019_06_09_135409) do
   end
 
   add_foreign_key "orders", "pharmacies", column: "pharmacie_id"
-  add_foreign_key "orders", "prescriptions"
   add_foreign_key "orders", "users"
   add_foreign_key "orders_prescriptions", "orders"
   add_foreign_key "orders_prescriptions", "prescriptions"

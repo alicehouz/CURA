@@ -47,25 +47,31 @@ margin-bottom: 0;
 }
 
 .welcome-footer-home{
-  height: 7vh;
-  position: absolute;
-  margin: auto;
-  bottom: 0px;
-  z-index: -50;
-  width: 100%;
-  border-radius: 21px 21px 0px 0px;
-  background-color: white;
+height: 7vh;
+margin: auto;
+bottom: 0px;
+z-index: -50;
+width: 100%;
+border-radius: 21px 21px 0px 0px;
+box-shadow: 3px 9px 35px 22px rgba(86, 86, 86, 0.1);
+background-color: #3A49CC;
+z-index: 2;
+align-items: center;
+justify-content: space-around;
+position: sticky;
+text-align: center;
 }
+.welcome-body{
+height: 66vh;
+width: 100%;
+display: flex;
+top: 217px;
+right: 16px;
+flex-direction: column;
+align-items: center;
 
-.welcome-body {
-  height: 55vh;
-  width: 94%;
-  display: flex;
-  position: absolute;
-  top: 200px;
-  right: 11px;
-  flex-direction: column;
-  align-items: center;
+
+
 }
 
 .scan {
@@ -156,21 +162,20 @@ margin-bottom: 0;
   overflow: hidden;
 }
 
-.modal-dialog {
-  margin-top: 426px;
+.modal-dialog{
+margin-top: 426px;
 }
-
-.modal-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border-radius: 11px;
-  outline: 0
- }
+.modal-container{
+position: relative;
+display: flex;
+flex-direction: column;
+width: 100%;
+pointer-events: auto;
+background-color: #fff;
+background-clip: padding-box;
+border-radius: 11px;
+outline: 0
+}
 
 .cloud-photo {
   width: 32%;
@@ -275,12 +280,14 @@ margin-bottom: 0;
   background-color: #3A49CC;
   border-radius: 26px 26px 0px 0px;
   padding: 0;
+
 }
 
 mark {
   background-color:  #3A49CC;
   color :white;
 }
+
 
 #file {
   width: 53%;
@@ -293,14 +300,14 @@ mark {
 }
 
 .homeicon, .ordersicon, .logicon {
-  width: 100%;
+  width: 33%;
   margin: 10px 0px 10px;
 }
 
 .presicon {
-  width: 85%;
+  width: 35%;
   margin: 10px 0px 10px;
-  height: 46%;
+
 }
 
 .list {
@@ -308,12 +315,12 @@ mark {
   width: 20px;
 }
 
+
 .grow:active {
   -webkit-transform: scale(1.5);
   -ms-transform: scale(1.5);
   transform: scale(1.5);
-  width: 105%;
-  margin: 10px 0px 10px;
-  height: 46%;
 }
+
+
 

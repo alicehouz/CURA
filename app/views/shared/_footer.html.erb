@@ -1,0 +1,15 @@
+<div class="welcome-footer-home d-flex">
+     <%= link_to welcome_path do%>
+    <%= image_tag ("home.png"), class: "homeicon grow " %>
+    <% end %>
+    <%= link_to orders_path do%>
+    <%= image_tag ("orders-white.png"), class: "ordersicon grow " %>
+    <% end %>
+    <%= link_to prescriptions_path do%>
+    <%= image_tag ("pres-white.png"), class: "presicon grow " %>
+    <% end %>
+    <%= link_to destroy_user_session_path, method: :delete do%>
+    <%= image_tag ("logout-white.png"), class: "logicon grow " %>
+    <% end %>
+
+</div>

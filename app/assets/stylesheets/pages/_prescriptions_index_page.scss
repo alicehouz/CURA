@@ -8,15 +8,17 @@
 }
 
 .prescriptions-header {
-  height: 14vh;
+  height: 11vh;
 }
 
 .text-my-prescriptions {
-  top: 8px;
-  left: 25px;
-  font-size: 18px;
+  top: 30%;
+  left: 8%;
+  font-size: 20%;
   color: white;
   position: absolute;
+  justify-content: space-between;
+  align-items: center;
 
 }
 
@@ -38,7 +40,7 @@
 
 .prescriptions-body {
   // background-color: #F1F1F1;
-  height: auto;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -73,7 +75,7 @@
   color:#898A8F;
 }
 
-.btn-outline-style-show {
+.btn-outline-style-show-index {
   border: dashed 0.5px #000000;
   border-radius: 16%;
   border-color: #898A8F;
@@ -82,13 +84,13 @@
   padding: 2% 12%;
 }
 
-.btn-outline-style-delete {
+.btn-outline-style-delete-index {
   border: dashed 0.5px #000000;
   border-radius: 16%;
   border-color: #898A8F;
   font-size: 70%;
   margin: 0% 0% 0% 2%;
-  padding: 2% 5%;
+  padding: 2% 12%;
 }
 
 .show-delete {
