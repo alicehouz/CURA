@@ -60,8 +60,6 @@
 // text-align: center;
 // }
 
-
-
 .welcome-body {
   height: 66vh;
   width: 100%;
@@ -117,7 +115,6 @@
   box-shadow: 3px 3px 35px 3px rgba(86, 86, 86, 0.16);
   margin-bottom: 15px;
   width: 47%;
-
   text-align: center;
   border-radius: 12px;
 }
@@ -129,21 +126,22 @@
 }
 
 .camera-photo {
-  width: 15%;
-  margin: 7px 7px 0px;
+  width: 10%;
+  margin: 7px 7px 0px ;
 }
 
 .cloud-upload {
-   width: 14%;
-   position: absolute;
-   top: 95px;
-   left: 171px;
+  width: 10%;
+  position: absolute;
+  top: 81px;
+  left: 163px;
 }
 
 #upload-text {
   position: absolute;
-  top: 134px;
-  left: 170px;
+  top: 107px;
+  left: 157px;
+  font-size: 14px;
 }
 
 #cameradiv {
@@ -161,19 +159,19 @@
 }
 
 .modal-dialog {
-margin-top: 426px;
+  margin-top: 426px;
 }
 
 .modal-container{
-position: relative;
-display: flex;
-flex-direction: column;
-width: 100%;
-pointer-events: auto;
-background-color: #fff;
-background-clip: padding-box;
-border-radius: 11px;
-outline: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 11px;
+  outline: 0;
 }
 
 .cloud-photo {
@@ -289,14 +287,14 @@ mark {
 
 
 #file {
-width: 57%;
-height: 11vh;
-position: absolute;
-left: 130px;
-opacity: 0;
-overflow: hidden;
-z-index: 1;
-color: transparent;
+  width: 57%;
+  height: 11vh;
+  position: absolute;
+  left: 130px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 1;
+  color: transparent;
 }
 
 .homeicon, .ordersicon, .logicon {
@@ -307,7 +305,6 @@ color: transparent;
 .presicon {
   width: 35%;
   margin: 10px 0px 10px;
-
 }
 
 .list {
