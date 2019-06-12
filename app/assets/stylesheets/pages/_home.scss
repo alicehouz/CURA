@@ -42,13 +42,12 @@
 // ************slider CSS**********************
 
 
-
-
 @mixin track($color: white, $radius: 0) {
     &::-webkit-slider-runnable-track {
         @content;
-        border-radius: $radius;
+        border-radius: 70px;
         background-color: $color;
+        height: 42px;
     }
     &::-moz-range-track {
         @content;
@@ -88,7 +87,7 @@
 }
 
 .pullee {
-    width: 14rem;
+    width: 15rem;
     appearance: none;
     background-color: transparent;
 
@@ -112,8 +111,8 @@
     // thumb styles
     @include thumb() {
         display: block;
-        width: 2.2rem;
-        height: 2.2rem;
+        width: 2.6rem;
+        height: 2.6rem;
         border-radius: 90%;
         background: #1E48A9;
         transform-origin: 60% 60%;
@@ -121,7 +120,7 @@
         transition: transform ease-out 30ms;
         cursor: -webkit-grab;
         cursor: -moz-grab;
-        margin: 1% 0% 0% 0%
+        margin: 0% 0% 0% 0%
 
     }
 
