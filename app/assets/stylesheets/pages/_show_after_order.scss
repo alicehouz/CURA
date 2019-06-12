@@ -1,45 +1,51 @@
 .checkmarks{
-width: 13%;
-height: 35vh;
-margin: 0px;
-position: absolute;
-left: 19px;
-top: 3px;
+  width: 13%;
+  height: 35vh;
+  margin: 0px;
+  position: absolute;
+  left: 19px;
+  top: 3px;
 }
-.textorder{
-width: 79%;
-height: 60vh;
-margin: 0px;
-position: absolute;
-left: 57px;
+
+.textorder {
+  width: 79%;
+  height: 60vh;
+  margin: 0px;
+  position: absolute;
+  left: 57px;
 }
+
 .order-status{
-height: 35vh;
-position: relative;
-top: 378px;
-display: flex;
-right: 11px;
-flex-direction: column;
+  height: 35vh;
+  position: relative;
+  top: 156px;
+  display: flex;
+  right: 11px;
+  flex-direction: column;
 }
 .img-visa {
 width: 20%;
 }
 .statusone, .statustwo, .statusthree{
-height: 10vh;
+  height: 10vh;
 }
+
 #statusonetext{
-font-size: 16px;
-position: absolute;
-left: 76px;
-top: 3px;
+  font-size: 16px;
+  position: absolute;
+  left: 76px;
+  top: -8px;
 }
+
 #statustwotext{
-font-size: 16px;
-position: absolute;
-left: 76px;
-top: 76px;
+  font-size: 16px;
+  position: absolute;
+  left: 76px;
+  top: 64px;
 }
+
 #statusthreetext {
+
 font-size: 16px;
 position: absolute;
 left: 76px;
@@ -78,68 +84,113 @@ border-radius: 20px;
 background-color: white;
 width: 90%;
 height: 36vh;
+  font-size: 16px;
+  position: absolute;
+  left: 76px;
+  top: 134px
 }
+
+.statusonedate {
+  margin: 0px;
+  color: grey;
+  font-size: 14px;
+
+}
+
+.statustwodate {
+  margin: 0px;
+  color: grey;
+  font-size: 14px;
+}
+
+.statusthreedate {
+  margin: 0px;
+  color: grey;
+  font-size: 14px;
+}
+
+.cardsorder {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  width: 90%;
+  top: 50%;
+  left: 18px;
+}
+
+.cardmap {
+  position: absolute;
+  top: 12%;
+  left: 4%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: white;
+  width: 90%;
+  height: 36vh;
+}
+
 .buttonsorder{
-position: absolute;
-position: absolute;
-top: 87%;
-left: 21%;
+  position: absolute;
+  position: absolute;
+  top: 87%;
+  left: 21%;
 }
+
 .checkicon {
-width: 10%;
+  width: 10%;
 }
+
 .spinnerone, .spinnertwo, .spinnerthree{
-position: absolute;
-left: 34px;
+  position: absolute;
+  left: 34px;
 }
+
 .pharmacistdelivery{
-width: 64%;
-position: absolute;
-top: 216px;
-left: 64px;
+  width: 49%;
+  position: absolute;
+  top: 440px;
+  left: 91px;
 }
+
 .textconfirmation {
-position: absolute;
-top: 147px;
-left: 72px;
-font-weight: bold;
-font-size: 18px;
+  position: absolute;
+  top: 147px;
+  left: 65px;
+  font-weight: bold;
+  font-size: 18px;
 }
+
 .timeone{
-color: grey;
-font-size: 15px;
-color: grey;
-position: absolute;
-top: 8%;
-left: 79px;
-display: none;
+  color: grey;
+  font-size: 15px;
+  color: grey;
+  position: absolute;
+  top: 8%;
+  left: 79px;
+  display: none;
 }
+
 .timetwo{
-color: grey;
-font-size: 15px;
-color: grey;
-position: absolute;
-top: 38%;
-left: 79px;
-display: none;
+  color: grey;
+  font-size: 15px;
+  color: grey;
+  position: absolute;
+  top: 38%;
+  left: 79px;
+  display: none;
 }
+
 .timethree{
-color: grey;
-font-size: 15px;
-color: grey;
-position: absolute;
-top: 66%;
-left: 79px;
-display: none;
+  color: grey;
+  font-size: 15px;
+  color: grey;
+  position: absolute;
+  top: 68%;
+  left: 79px;
+  display: none;
 }
-.orderstatus{
-font-size: 22px;
-font-weight: bold;
-color: #3A49CC;
-position: absolute;
-top: 22px;
-left: 21px;
-}
+
 #map {
 position: absolute;
 height: 157px;
@@ -165,6 +216,22 @@ position: absolute;
   position: absolute;
     top: 133px;
 margin: 0px;
+
+
+.orderstatus {
+  height: 35vh;
+  position: relative;
+  top: 162px;
+  display: flex;
+  right: 11px;
+  flex-direction: column;
+
+}
+
+#map {
+  position: absolute;
+  left: 36px;
+  top: 96px;
 }
 
 
@@ -179,6 +246,17 @@ text-align: center;
 text-decoration: none;
 
 
+
+.card{
+  background-color: white;
+  height: 35vh;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  position: absolute;
+  left: 19px;
+  top: 93px;
+  width: 90%;
+  border-radius: 21px;
+
 }
 .buttoncenter{
 
@@ -189,5 +267,9 @@ text-decoration: none;
 
   color: white;
   padding: 10px;
+
+
+.pharmaciedetails {
+  position: absolute;
 
 }

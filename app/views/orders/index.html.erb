@@ -16,39 +16,40 @@
         <div class="card-body"> -->
           <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %></h5>
           <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
-          <p class="card-text">Date de commande : <%= order.order_date %></p>
+          <p class="card-text">Date de la commande : <%= order.order_date %></p>
           <div class="show-delete">
             <button type="button" class="btn btn-outline-light btn-outline-style-show" ><%= link_to "Accéder", order_path(order) %></button>
             <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Supprimer", prescription_order_path(order.prescriptions.first, order.id), method: :delete %>
             </button>
           </div>
-          <!-- <p><%= link_to "show", order_path(order) %></p>
-          <p><%= link_to "delete", prescription_order_path(order.prescriptions.first, order.id), method: :delete %></p> -->
-        <!-- </div>
-      </div> -->
+
       <% end %>
-      <% if order.order_status == "delivery" %>
+      <% if order.order_status == "pharmacie accept" %>
       <!-- <div class="card" style="width: 18rem;">
         <div class="card-body"> -->
+
           <h5 class="card-title"></h5>
           <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %></h5>
           <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
           <p class="card-text">Date de commande : <%= order.order_date %></p>
-          <p class="card-text">Adresse de livraison :<%= order.street_name %>,<%= order.zip_code %>,<%= order.city %> </p>
+          <p class="card-text">Adresse de livraison :<%= order.street_name %> </p>
           <div class="show-delete">
             <button type="button" class="btn btn-outline-light btn-outline-style-show" ><%= link_to "Accéder", order_path(order) %></button>
             <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Supprimer", prescription_order_path(order.prescriptions.first, order.id), method: :delete %>
             </button>
           </div>
-          <!-- <p><%= link_to "show", order_path(order) %></p>
-          <p><%= link_to "delete", prescription_order_path(order.prescriptions.first, order.id), method: :delete %></p> -->
-        <!-- </div>
-      </div> -->
+
+
       <% end %>
     </div>
     <% end %>
   </div>
-<%= render 'shared/footer' %>
+<div class="d-flex align-items-end">
+    <%= render 'shared/footer' %>
+</div>
+
+
+
 
 
 

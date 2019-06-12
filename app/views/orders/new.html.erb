@@ -4,7 +4,7 @@
       <%= link_to welcome_path do%>
       <%= image_tag ("close.png"), class: "arrow-address" %>
       <%end%>
-      <h2 class="text-header-address">Placing an order</h2>
+      <h2 class="text-header-address">Faire une commande</h2>
     </div>
     <div class="address-steps">
       <%= image_tag ("2.png"), class: "steps-address" %>
@@ -12,12 +12,12 @@
   </div>
 
     <div class="address-body">
-      <p class="addressbody-text">Your delivery address: </p>
+      <p class="addressbody-text">Votre adresse de livraison: </p>
       <div class="white-container-address">
         <%= simple_form_for [@prescription, @order] do |f| %>
-          <%= f.input :street_name, input_html: { value: current_user.street_name }, class: "street_name" %>
-          <%= f.input :zip_code, input_html: { value: current_user.zip_code } %>
-          <%= f.input :city, input_html: { value: current_user.city }%>
+          <%= f.input :street_name, input_html: { value: current_user.street_name, class: "street_name" } %>
+          <%= f.input :zip_code, input_html: { value: current_user.zip_code, class: "zip_code" } %>
+          <%= f.input :city, input_html: { value: current_user.city, class: "cityname_input" }%>
 
         <div class="select-this-address">
           <button type="submit" class="selectaddr">

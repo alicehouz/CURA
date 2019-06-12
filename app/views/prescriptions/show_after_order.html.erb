@@ -6,14 +6,14 @@
         <%= link_to welcome_path do%>
         <%= image_tag ("close.png"), class: "arrow-order" %>
         <%end%>
-        <h2 class="text-header-order">Placing an order</h2>
+        <h2 class="text-header-order">Faire une commande</h2>
       </div>
       <div class="order-steps">
         <%= image_tag ("3.png"), class: "steps-order" %>
       </div>
     </div>
-    <p class="textconfirmation ">Merci pour votre commande </p>
-    <%= image_tag ("pharmacist.png") , class: "pharmacistdelivery"%>
+    <p class="textconfirmation">Suivi de votre commande</p>
+    <%= image_tag ("pharmacist-prep.png") , class: "pharmacistdelivery"%>
     <div class="order-status" >
       <div class="statusone d-flex justify-content-around">
         <div class="spinnerone">
@@ -26,14 +26,14 @@
         <div class="spinnertwo">
           <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
         </div>
-        <p id="statustwotext">La pharmacie prépare ta commande</p>
+        <p id="statustwotext">Préparation de votre commande</p>
         <p  class="timetwo"><%= Time.now %></p>
       </div>
       <div class="statusthree d-flex justify-content-around">
         <div class="spinnerthree">
           <div class="spinner-border text-primary spinner" style="width: 1.3rem; height: 1.3rem;" role="status"></div>
         </div>
-        <p id="statusthreetext">La pharmacie prépare ta facture</p>
+        <p id="statusthreetext">Préparation de votre facture</p>
         <p class="timethree"><%= Time.now %></p>
       </div>
     </div>
@@ -42,7 +42,7 @@
   <% if @prescription.orders.last.order_status == "pharmacie accept"  %>
   <div class="textdiv">
     <div>
-      <h2 class ="orderstatus "> Order Status</h2>
+      <h2 class ="orderstatus ">Commandes</h2>
       <div class="card" >
         <div class="pharmaciedetails">
           <p class ="namepharmacie"><%= @prescription.orders.last.pharmacie.name %></p>
@@ -61,19 +61,19 @@
       <div class= "orderpayment">
         <div class="cardsorder p-3 ">
           <div class="d-flex justify-content-between mb-3">
-            <p><strong>Prescription Price</strong> </p>
+            <p><strong>Montant de l'ordonnance</strong> </p>
             <p>€4.95</p>
           </div>
           <div class="d-flex justify-content-between mb-3">
-            <p><strong>Refunded amount</strong></p>
+            <p><strong>Montant pris en charge</strong></p>
             <p>€3.95</p>
           </div>
           <div class="d-flex justify-content-between mb-3 border-bottom">
-            <p><strong>Delivery fees</strong> stop paying this</p>
+            <p><strong>Frais de livraison</strong></p>
             <p>€1.5</p>
           </div>
           <div class="d-flex justify-content-between mb-3 ">
-            <p><strong>Total</strong></p>
+            <p><strong>Total à régler</strong></p>
             <p><strong>€2.5</strong></p>
           </div>
         </div>
