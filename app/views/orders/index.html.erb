@@ -16,7 +16,7 @@
         <div class="card-body"> -->
           <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %></h5>
           <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
-          <p class="card-text">Date de commande : <%= order.order_date %></p>
+          <p class="card-text">Date de la commande : <%= order.order_date %></p>
           <div class="show-delete">
             <button type="button" class="btn btn-outline-light btn-outline-style-show" ><%= link_to "Accéder", order_path(order) %></button>
             <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Supprimer", prescription_order_path(order.prescriptions.first, order.id), method: :delete %>
