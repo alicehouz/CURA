@@ -3,9 +3,9 @@
   <div class="order-header">
     <div class="placeorder d-flex justify-content-start">
       <%= link_to welcome_path do%>
-      <%= image_tag ("left-arrow.png"), class: "arrow-order" %>
+      <%= image_tag ("close.png"), class: "arrow-order" %>
       <%end%>
-      <h2 class="text-header-order">Placing an order</h2>
+      <h2 class="text-header-order">Faire une commande</h2>
     </div>
     <div class="order-steps">
       <%= image_tag ("1.png"), class: "steps-order" %>
@@ -13,17 +13,17 @@
   </div>
   <div class="order-body">
     <div class="white-container">
-      <p class="orderbody-text"> Scanned prescription</p>
+      <p class="orderbody-text"> Scanner votre ordonnance</p>
       <div class="links-scan d-flex">
         <%= link_to welcome_path do%>
         <div class="rescan-div d-flex">
           <%= image_tag ("reload.png"), class: "rescan-photo" %>
-          <p class="rescan">Rescan</p>
+          <p class="rescan">Rescanner</p>
         </div>
         <%end%>
         <div class="add-div">
           <%= link_to welcome_path do%>
-          <p class="text-scan">+ Add another product</p>
+          <p class="text-scan">+ Ajouter ordonnance</p>
           <%end%>
         </div>
       </div>
@@ -37,7 +37,7 @@
 
       <div class="white-footer">
         <%= link_to  new_prescription_order_path(@prescription) do%>
-        <%= image_tag ("right.png") %>
+        <%= image_tag ("next.svg"), class: "nextone" %>
         <% end %>
 
       </div>
