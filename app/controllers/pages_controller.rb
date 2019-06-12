@@ -21,4 +21,7 @@ class PagesController < ApplicationController
   def order_placement_3
   end
 
+  def delivery
+  end
+
 end

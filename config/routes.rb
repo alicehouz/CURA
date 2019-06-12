@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
 
   get 'welcome', to: "pages#welcome"
+  get 'delivery', to: "pages#delivery"
 
   devise_for :users
 
