@@ -23,11 +23,9 @@
   right: 11px;
   flex-direction: column;
 }
-
 .img-visa {
-  width: 20%;
+width: 20%;
 }
-
 .statusone, .statustwo, .statusthree{
   height: 10vh;
 }
@@ -47,6 +45,45 @@
 }
 
 #statusthreetext {
+
+font-size: 16px;
+position: absolute;
+left: 76px;
+top: 150px;
+}
+.statusonedate{
+margin: 0px;
+color: grey;
+font-size: 14px;
+}
+.statustwodate{
+margin: 0px;
+color: grey;
+font-size: 14px;
+}
+.statusthreedate{
+margin: 0px;
+color: grey;
+font-size: 14px;
+}
+.cardsorder{
+border: 1px solid rgba(0, 0, 0, 0.125);
+border-radius: 20px;
+background-color: white;
+position: absolute;
+width: 90%;
+top: 47%;
+left: 18px;
+}
+.cardmap{
+position: absolute;
+top: 12%;
+left: 4%;
+border: 1px solid rgba(0, 0, 0, 0.125);
+border-radius: 20px;
+background-color: white;
+width: 90%;
+height: 36vh;
   font-size: 16px;
   position: absolute;
   left: 76px;
@@ -57,6 +94,7 @@
   margin: 0px;
   color: grey;
   font-size: 14px;
+
 }
 
 .statustwodate {
@@ -153,6 +191,33 @@
   display: none;
 }
 
+#map {
+position: absolute;
+height: 157px;
+top: 71px;
+left: 43px;
+}
+.card{
+background-color: white;
+height: 35vh;
+border: 1px solid rgba(0, 0, 0, 0.125);
+position: absolute;
+left: 19px;
+top: 72px;
+width: 90%;
+border-radius: 21px;
+}
+.pharmaciedetails{
+position: absolute;
+}
+
+#popuppayment{
+
+  position: absolute;
+    top: 133px;
+margin: 0px;
+
+
 .orderstatus {
   height: 35vh;
   position: relative;
@@ -160,6 +225,7 @@
   display: flex;
   right: 11px;
   flex-direction: column;
+
 }
 
 #map {
@@ -167,6 +233,19 @@
   left: 36px;
   top: 96px;
 }
+
+
+.submitpayment{
+outline: none;
+border: none;
+border-radius: 32px;
+padding: 5px 82px 10px 10px;
+background-color: #3A49CC;
+color: white;
+text-align: center;
+text-decoration: none;
+
+
 
 .card{
   background-color: white;
@@ -177,8 +256,20 @@
   top: 93px;
   width: 90%;
   border-radius: 21px;
+
 }
+.buttoncenter{
+
+  text-align: center;
+}
+
+.validationtext{
+
+  color: white;
+  padding: 10px;
+
 
 .pharmaciedetails {
   position: absolute;
+
 }
