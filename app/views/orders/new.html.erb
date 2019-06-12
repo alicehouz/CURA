@@ -15,9 +15,9 @@
       <p class="addressbody-text">Votre adresse de livraison: </p>
       <div class="white-container-address">
         <%= simple_form_for [@prescription, @order] do |f| %>
-          <%= f.input :street_name, input_html: { value: current_user.street_name }, class: "street_name" %>
-          <%= f.input :zip_code, input_html: { value: current_user.zip_code } %>
-          <%= f.input :city, input_html: { value: current_user.city }%>
+          <%= f.input :street_name, input_html: { value: current_user.street_name, class: "street_name" } %>
+          <%= f.input :zip_code, input_html: { value: current_user.zip_code, class: "zip_code" } %>
+          <%= f.input :city, input_html: { value: current_user.city, class: "cityname_input" }%>
 
         <div class="select-this-address">
           <button type="submit" class="selectaddr">
