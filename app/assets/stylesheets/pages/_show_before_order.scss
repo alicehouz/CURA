@@ -61,13 +61,14 @@
 }
 
 .image-uploaded {
-  border: 1px solid #3a49cc;
-  width: 74%;
-  height: 46vh;
-  position: absolute;
-  top: 79px;
-  left: 43px;
-  border-radius: 11px;
+ border: 1px solid #3a49cc;
+    width: 74%;
+    height: 39vh;
+    position: absolute;
+    top: 84px;
+    left: 43px;
+    border-radius: 11px;
+    padding: 23px;
 }
 
 .white-footer {
@@ -112,4 +113,7 @@
 
 .nextone {
   width: 17%;
+      position: absolute;
+    bottom: 4px;
+    left: 129px;
 }
