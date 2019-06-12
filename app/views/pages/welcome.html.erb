@@ -6,7 +6,7 @@
       <h2 id="font-welcome">Bienvenue sur Cura...</h2>
       <h2 id="name-user-welcome" > <mark><%=current_user.first_name%></mark></h2>
 
-        <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> Votre addresse de livraison: <%= current_user.street_name%>, <br> <%current_user.city %></p>
+        <p id="font-address-home"> <i class="fas fa-map-marker-alt"></i> <%= current_user.street_name %>, <%= current_user.city %></p>
 
       <%else%>
       <h2 id="font-welcome-user">Bienvenue sur Cura</h2>
