@@ -18,7 +18,7 @@ html, body{
   height: 100%;
 }
 
-.background-stuff{
+.background-stuff {
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@ html, body{
   }
   .ground{
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     margin-bottom: em(-30px, $basepx);
     height: 50%;
     width: 100%;
@@ -57,7 +57,7 @@ html, body{
   }
 }
 
-.deliverycontainer{
+.deliverycontainer {
   height: 100%;
   width: 100%;
   display: table;
@@ -401,6 +401,7 @@ html, body{
 .car-wrapper_inner{
   position: relative;
   z-index: 4;
+  bottom: 38px;
 }
 
 @keyframes carMove{
@@ -427,9 +428,9 @@ html, body{
 }
 
 .car_outter{
-  @include prefix(transform, translateX(-100%));
+  @include prefix(transform, translateX(-75%));
   position: relative;
-  animation: carDrive 5s 1s cubic-bezier(0.88, 0.08, 0.16, 1.1) infinite;
+  animation: carDrive 5s cubic-bezier(0.88, 0.08, 0.16, 1.1) infinite;
 }
 
 @keyframes carDrive{
@@ -467,41 +468,44 @@ html, body{
   }
 }
 
-.titledelivery{
-
-
- font-family: "poppins";
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    z-index: 1;
-    position: absolute;
-    top: 104px;
-    left: 25px;
-    width: 100%;
+.titledelivery {
+  font-family: "poppins";
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  z-index: 1;
+  position: absolute;
+  top: 104px;
+  left: 25px;
+  width: 100%;
 }
 
 .textdelivery{
-       font-family: "poppins";
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    z-index: 1;
-    position: absolute;
-    top: 111px;
-    left: 81px;
-
-
+  font-family: "poppins";
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  z-index: 1;
+  position: absolute;
+  top: 111px;
+  left: 81px;
 }
 
 .getwell {
+  font-family: "poppins";
+  color: white;
+  font-size: 20px;
+  z-index: 1;
+  position: absolute;
+  top: 139px;
+  left: 83px;
+}
 
-      font-family: "poppins";
-    color: white;
-    font-size: 20px;
-
-    z-index: 1;
-    position: absolute;
-       top: 139px;
-    left: 89px;
+.cross-exit {
+  width: 12%;
+  position: absolute;
+  top: 560px;
+  left: 163px;
+  z-index: 40;
+  opacity: 0.8;
 }
