@@ -8,48 +8,38 @@
     </div>
   </div>
 </div>
-  <div class="orders-body">
-    <% @orders.each do |order| %>
-    <div class="card-category">
-      <% if order.order_status == "pending" %>
-      <!-- <div class="card" style="width: 18rem;">
-        <div class="card-body"> -->
-          <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %></h5>
-          <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
-          <p class="card-text">Date de la commande : <%= order.order_date %></p>
-          <div class="show-delete">
-            <button type="button" class="btn btn-outline-light btn-outline-style-show" ><%= link_to "Accéder", order_path(order) %></button>
-            <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Supprimer", prescription_order_path(order.prescriptions.first, order.id), method: :delete %>
-            </button>
-          </div>
+<div class="orders-body">
+  <% @orders.each do |order| %>
+  <div class="card-category-orders">
 
-      <% end %>
-      <% if order.order_status == "pharmacie accept" %>
-      <!-- <div class="card" style="width: 18rem;">
-        <div class="card-body"> -->
-
-          <h5 class="card-title"></h5>
-          <h5 class="card-title"><%= order.prescriptions.first.prescription_name if order.prescriptions.present? %></h5>
-          <h6 class="card-subtitle mb-2 text-muted">Status - <%= order.order_status %></h6>
-          <p class="card-text">Date de commande : <%= order.order_date %></p>
-          <p class="card-text">Adresse de livraison :<%= order.street_name %> </p>
-          <div class="show-delete">
-            <button type="button" class="btn btn-outline-light btn-outline-style-show" ><%= link_to "Accéder", order_path(order) %></button>
-            <button type="button" class="btn btn-outline-light btn-outline-style-delete" ><%= link_to "Supprimer", prescription_order_path(order.prescriptions.first, order.id), method: :delete %>
-            </button>
-          </div>
-
-
-      <% end %>
+    <div class="colored-hover">
+      <h6 class="card-subtitle mb-2 text-muted">Commande<br> #<%= order.order_number %></h6>
+      <h6 class="card-subtitle mb-2 text-muted"><%= order.order_status %></h6>
     </div>
-    <% end %>
+    <div class="show-delete d-flex">
+      <div class="show-delete-address d-flex">
+        <%= image_tag ("process.png"), class: "process-logo", style: "height: 95%;" %>
+        <div>
+          <p class="card-text"><%= order&.pharmacie&.address || "En attente de la pharmacie" %></p>
+          <p class="card-text"><%= order.street_name %> </p>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+        <%= link_to order_path(order) do %>
+        <%= image_tag ("see-more.svg"), class: "see-more-logo" %>
+        <% end %>
+        <%= link_to prescription_order_path(order.prescriptions.first, order.id), method: :delete do %>
+        <%= image_tag ("rubbish-bin.svg"), class: "rubbish-bin-logo" %>
+        <% end %>
+        </div>
+      <p class="m-0">2.5€</p>
+      </div>
+    </div>
+
   </div>
-<div class="d-flex align-items-end">
-    <%= render 'shared/footer' %>
+  <% end %>
 </div>
-
-
-
-
-
-
+<div class="d-flex align-items-end">
+  <%= render 'shared/footer' %>
+</div>

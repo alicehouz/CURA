@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
   def index
     @orders = Order.where(user: current_user)
-    @orders = Order.all
   end
 
   def new

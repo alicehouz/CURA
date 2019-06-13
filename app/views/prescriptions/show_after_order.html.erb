@@ -39,13 +39,13 @@
     </div>
   </div>
   <% end %>
-  <% if @prescription.orders.last.order_status == "pharmacie accept"  %>
+  <% if @prescription.orders.last.order_status == "Accepté"  %>
   <div class="textdiv">
     <div>
       <h2 class ="orderstatustwo ">Détails de votre commande</h2>
       <div class="card" >
         <div class="pharmaciedetails">
-          <p class="pharmacie"> Votre Pharmacie: </p>
+          <p class="pharmacie"> Votre Pharmacie</p>
           <p class ="namepharmacie"><%= @prescription.orders.last.pharmacie.name %></p>
           <p class ="addresspharmacie"><%= @prescription.orders.last.pharmacie.address %></p>
         </div>
@@ -63,24 +63,24 @@
         <div class="cardsorder p-3 ">
           <div class="d-flex justify-content-between mb-3">
             <p><strong>Montant de l'ordonnance</strong> </p>
-            <p>€4.95</p>
+            <p>4.95€</p>
           </div>
           <div class="d-flex justify-content-between mb-3">
             <p><strong>Montant pris en charge</strong></p>
-            <p>€3.95</p>
+            <p>3.95€</p>
           </div>
           <div class="d-flex justify-content-between mb-3 border-bottom">
             <p><strong>Frais de livraison</strong></p>
-            <p>€1.5</p>
+            <p>1.5€</p>
           </div>
           <div class="d-flex justify-content-between mb-3 ">
             <p><strong>Total à régler</strong></p>
-            <p><strong>€2.5</strong></p>
+            <p><strong>2.5€</strong></p>
           </div>
         </div>
         <div class="buttonsorder">
-          <button type="button" class="submitpopup" data-toggle="modal" data-target="#exampleModal">Paiement</button>
-          <button type="button" class="cancelpopup">Annulation</button>
+          <button type="button" class="submitpopup" data-toggle="modal" data-target="#exampleModal">Payer</button>
+          <button type="button" class="cancelpopup">Annuler</button>
         </div>
       </div>
 
@@ -106,7 +106,7 @@
                  </div>
                  <div class="form-group row">
                    <div class="col-sm-10 buttoncenter">
-                    <button type="submit" class="submitpayment"><%= link_to "Validé", delivery_path, class: "validationtext" %></button>
+                    <button type="submit" class="submitpayment"><%= link_to "Valider", delivery_path, class: "validationtext" %></button>
                    </div>
                 </form>
               </div>
