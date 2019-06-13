@@ -23,9 +23,11 @@
   right: 11px;
   flex-direction: column;
 }
+
 .img-visa {
-width: 20%;
+  width: 20%;
 }
+
 .statusone, .statustwo, .statusthree{
   height: 10vh;
 }
@@ -34,7 +36,6 @@ width: 20%;
   font-size: 16px;
   position: absolute;
   left: 76px;
-
 }
 
 #statustwotext{
@@ -45,46 +46,50 @@ width: 20%;
 }
 
 #statusthreetext {
+  font-size: 16px;
+  position: absolute;
+  left: 76px;
+  top: 134px;
+}
 
-font-size: 16px;
-position: absolute;
-    left: 76px;
-    top: 134px;
-}
 .statusonedate{
-margin: 0px;
-color: grey;
-font-size: 14px;
+  margin: 0px;
+  color: grey;
+  font-size: 14px;
 }
+
 .statustwodate{
-margin: 0px;
-color: grey;
-font-size: 14px;
+  margin: 0px;
+  color: grey;
+  font-size: 14px;
 }
+
 .statusthreedate{
-margin: 0px;
-color: grey;
-font-size: 14px;
+  margin: 0px;
+  color: grey;
+  font-size: 14px;
 }
+
 .cardsorder{
-border: 1px solid rgba(0, 0, 0, 0.125);
-border-radius: 20px;
-background-color: white;
-position: absolute;
-width: 90%;
-top: 45%;
-left: 18px;
-    height: 35vh;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  width: 90%;
+  top: 56%;
+  left: 18px;
+  height: 27vh;
 }
+
 .cardmap{
-position: absolute;
-top: 12%;
-left: 4%;
-border: 1px solid rgba(0, 0, 0, 0.125);
-border-radius: 20px;
-background-color: white;
-width: 90%;
-height: 36vh;
+  position: absolute;
+  top: 12%;
+  left: 4%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
+  background-color: white;
+  width: 90%;
+  height: 36vh;
   font-size: 16px;
   position: absolute;
   left: 76px;
@@ -95,7 +100,6 @@ height: 36vh;
   margin: 0px;
   color: grey;
   font-size: 14px;
-
 }
 
 .statustwodate {
@@ -108,16 +112,6 @@ height: 36vh;
   margin: 0px;
   color: grey;
   font-size: 14px;
-}
-
-.cardsorder {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 20px;
-  background-color: white;
-  position: absolute;
-  width: 90%;
-  top: 50%;
-  left: 18px;
 }
 
 .cardmap {
@@ -134,8 +128,8 @@ height: 36vh;
 .buttonsorder{
   position: absolute;
   position: absolute;
-  top: 87%;
-  left: 21%;
+  top: 85%;
+  left: 16%;
 }
 
 .checkicon {
@@ -177,8 +171,8 @@ height: 36vh;
   font-size: 15px;
   color: grey;
   position: absolute;
-      top: 36%;
-    left: 76px;
+  top: 36%;
+  left: 76px;
   display: none;
 }
 
@@ -187,136 +181,113 @@ height: 36vh;
   font-size: 15px;
   color: grey;
   position: absolute;
-     top: 66%;
-    left: 77px;
+  top: 66%;
+  left: 77px;
   display: none;
 }
 
 #map {
-position: absolute;
-height: 157px;
-top: 71px;
-left: 43px;
-}
-.card{
-background-color: white;
-height: 35vh;
-border: 1px solid rgba(0, 0, 0, 0.125);
-position: absolute;
-left: 19px;
-top: 72px;
-width: 90%;
-border-radius: 21px;
-}
-.pharmaciedetails{
-position: absolute;
-}
-
-#popuppayment{
-
   position: absolute;
-    top: 133px;
-margin: 0px;
+  height: 157px;
+  top: 71px;
+  left: 43px;
+}
+
+.card {
+  background-color: white;
+  height: 40vh;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  position: absolute;
+  left: 19px;
+  top: 91px;
+  width: 90%;
+  border-radius: 21px;
 }
 
 
-.orderstatustwo{
-color: #3A49CC;
-font-size: 20px;
-font-weight: bold;
-position: absolute;
-    top: 29px;
-    left: 26px;
+#popuppayment {
+  position: absolute;
+  top: 133px;
+  margin: 0px;
+}
+
+
+.orderstatustwo {
+  color: #3A49CC;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 29px;
+  left: 26px;
 }
 
 #map {
   position: absolute;
   left: 17px;
-  top: 102px;
+  top: 90px;
 }
 
-
-.submitpayment{
-outline: none;
-border: none;
-border-radius: 32px;
-padding: 5px 10px 10px 10px;
-background-color: #3A49CC;
-color: white;
-text-align: center;
-text-decoration: none;
+.submitpayment {
+  outline: none;
+  border: none;
+  border-radius: 32px;
+  padding: 5px 10px 5px 10px;
+  background-color: #3A49CC;
+  color: white;
+  text-align: center;
+  text-decoration: none;
 }
 
-
-.card{
-  background-color: white;
-  height: 35vh;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  position: absolute;
-  left: 19px;
-  top: 86px;
-  width: 90%;
-  border-radius: 21px;
-
-}
 .buttoncenter{
-
   text-align: center;
 }
 
 .validationtext{
-
   color: white;
   padding: 10px;
 }
 
-
 .pharmaciedetails {
   position: absolute;
-  left: 15px;
-  top: 12px;
+  left: 21px;
+  top: 11px;
 }
 
- .namepharmacie, .addresspharmacie{
+.namepharmacie, .addresspharmacie {
   margin: 0;
   font-size: 14px;
-
-
 }
 
-
-.pharmacie{
-    margin: 0;
+.pharmacie {
+  margin: 0;
   font-size: 17px;
   font-weight: bold;
-
-
 }
 
-.submitpopup{
-  outline: none;
-border: none;
-border-radius: 32px;
-padding: 5px 12px 10px 10px;
-background-color: #3A49CC;
-color: white;
-text-align: center;
-text-decoration: none;
-
-
+.submitpopup {
+    outline: none;
+    border: none;
+    border-radius: 80px;
+    padding: 5px 25px 5px 25px;
+    background-color: #3A49CC;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 31px;
 }
 
-.cancelpopup{
+.cancelpopup {
   outline: none;
-border: none;
-border-radius: 32px;
-padding: 5px 12px 10px 10px;
-background-color: grey;
-color: white;
-text-align: center;
-text-decoration: none;
+  border: none;
+  border-radius: 80px;
+  padding: 5px 19px 5px 19px;
+  background-color: lightgrey;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
 
-
-
-
+.mb-3 {
+  margin-bottom: 0rem !important;
 }
