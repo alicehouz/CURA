@@ -40,12 +40,14 @@
 
 .prescriptions-body {
   // background-color: #F1F1F1;
-  height: 120vh;
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  z-index: 1;
-}
+    height: calc(100vh - 133px);
+    display: flex;
+    flex-direction: column;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+    overflow: scroll;
+  }
 
 .card-category {
   background-color: white;
