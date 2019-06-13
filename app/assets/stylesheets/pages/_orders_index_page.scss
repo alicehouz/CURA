@@ -19,7 +19,6 @@
   position: absolute;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .chevron-style {
@@ -33,11 +32,6 @@
   font-size: 24px;
 }
 
-// .circle-style {
-//   size: 4%;
-//   padding: 2% 2% 0% 0%;
-// }
-
 .orders-body {
   // background-color: #F1F1F1;
      height: calc(100vh - 133px);
@@ -49,22 +43,19 @@
     overflow: scroll;
 }
 
-.card-category {
+.card-category-orders {
   background-color: white;
-  background-size: cover;
-  background-position: center;
-  height: 25%;
+  height: 30%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  text-align: left;
   color: black;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 16px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 2% 8% 3% 8%;
-  padding: 2%;
   z-index: 2;
+  font-size: 10px;
+
 }
 
 .order-name {
@@ -95,11 +86,48 @@
   padding: 2% 11%;
 }
 
-.show-delete {
-  padding: 2%;
+.see-more-logo {
+  width: 9%;
 }
 
+.rubbish-bin-logo {
+  width: 9%;
+}
 
+.colored-hover {
+  min-width: 28%;
+  background-color: #cfcfd3;
+  border-radius: 10px 0px 0px 10px;
 
+}
 
+.colored-hover:hover {
+  background-color: #5865ce;
+}
 
+.card-subtitle {
+  color: white !important;
+  padding-top: 20px;
+  font-size: 12px;
+  padding-left: 8px;
+}
+
+.process-logo {
+    width: 4%;
+    height: 2%;
+    margin-right: 10px;
+}
+
+.card-text {
+  width: 180px;
+}
+
+.show-delete {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4%;
+}
+
+.m-0 {
+  font-size: 13px;
+}

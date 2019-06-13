@@ -150,6 +150,9 @@
   left: 31%;
   top: 25%;
   color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, lightgrey 100%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 }
 

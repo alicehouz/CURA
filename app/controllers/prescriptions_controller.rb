@@ -47,7 +47,7 @@ class PrescriptionsController < ApplicationController
 
   def simul_validation_pharm
     @order = Order.last
-    @order.order_status = "pharmacie accept"
+    @order.order_status = "Accepté"
 
     @pharmacie = Pharmacie.find(1)
     @order.pharmacie = @pharmacie
