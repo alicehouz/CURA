@@ -20,7 +20,7 @@
   position: relative;
   top: 156px;
   display: flex;
-  right: 11px;
+  right: -11px;
   flex-direction: column;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .statusone, .statustwo, .statusthree{
-  height: 10vh;
+  height: 9vh;
 }
 
 #statusonetext{
@@ -42,7 +42,7 @@
   font-size: 16px;
   position: absolute;
   left: 76px;
-  top: 64px;
+  top: 67px;
 }
 
 #statusthreetext {
@@ -144,14 +144,14 @@
 .pharmacistdelivery{
   width: 49%;
   position: absolute;
-  top: 440px;
+  top: 464px;
   left: 91px;
 }
 
 .textconfirmation {
   position: absolute;
   top: 147px;
-  left: 65px;
+  left: 84px;
   font-weight: bold;
   font-size: 18px;
 }
@@ -161,7 +161,7 @@
   font-size: 15px;
   color: grey;
   position: absolute;
-  top: 8%;
+  top: 9%;
   left: 79px;
   display: none;
 }
@@ -171,7 +171,7 @@
   font-size: 15px;
   color: grey;
   position: absolute;
-  top: 36%;
+  top: 35%;
   left: 76px;
   display: none;
 }
@@ -181,7 +181,7 @@
   font-size: 15px;
   color: grey;
   position: absolute;
-  top: 66%;
+  top: 62%;
   left: 77px;
   display: none;
 }
